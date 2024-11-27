@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Using Font Awesome CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+    <title>Shebs Travel Agency</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Navigation Bar -->
+    <header>
+        <nav class="navbar">
+            <div class="logo">Shebs</div>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li class="dropdown">
+                    <a href="/Project files/Services.html">Services</a>
+                    <ul class="dropdown-content">
+                        <li><a href="/Project files/Services.html">Custom Travel Planning</a></li>
+                        <li><a href="/Project files/Services.html">Travel Insurance</a></li>
+                        <li><a href="/Project files/Services.html">Transportation Services</a></li>
+                        <li><a href="/Project files/Services.html">Destination Guides</a></li>
+                        <li><a href="/Project files/Services.html">Adventure & Special Interest Travel</a></li>
+                    </ul>
+                </li>
+                <li><a href="#destination">Destinations</a></li>
+                <li class="dropdown">
+                    <a href="#">Packages</a>
+                    <ul class="dropdown-content">
+                        <li><a href="#">Solo Packages</a></li>
+                        <li><a href="#">Group Packages</a></li>
+                        <li class="dropdown">
+                            <a href="#">Event Packages</a>
+                            <ul class="dropdown-content">
+                                <li><a href="#">Umrah & Hajj</a></li>
+                                <li><a href="#">Destination Weddings</a></li>
+                                <li><a href="#">Corporate Retreats</a></li>
+                                <li><a href="#">New Year</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li><a href="#client">Clients</a></li>
+            </ul>
+            <button class="login-btn">Login</button>
+        </nav>
+    </header>
+    
+    <!-- Hero Section with Background Image -->
+    <section id="home" class="hero reveal">
+        <div class="hero-content">
+            <h1><span style="font-size: larger; color: #181C14;">Discover</span> the World with Shebs</h1>
+            <p>Unforgettable journeys, <span style="color: #ECDFCC;">breathtaking destinations,</span> and personalized adventures <span style="color: #ECDFCC;">await</span> you.</p>
+        </div>
+
+        <!-- Booking Form -->
+        <div class="booking-form">
+            <div class="form-field">
+                <label for="city">Choose City</label>
+                <input type="text" id="city" placeholder="City">
+            </div>
+            <div class="form-field">
+                <label for="start-date">Start Date</label>
+                <input type="date" id="start-date">
+            </div>
+            <div class="form-field">
+                <label for="end-date">End Date</label>
+                <input type="date" id="end-date" value="2024-09-06">
+            </div>
+            <div class="form-field">
+                <label for="participants">Participants</label>
+                <div class="participant-control">
+                    <button type="button" class="participant-btn" id="decrease">-</button>
+                    <input type="number" id="participants" value="1" min="1">
+                    <button type="button" class="participant-btn" id="increase">+</button>
+                </div>
+            </div>
+            <button class="find-tours">Find Tours</button>
+        </div>
+    </section>
+
+    <section class="space reveal">
+        <div class="text-layer">
+            <h2 class="background-text">Adventure Awaits</h2>
+            <h2 class="foreground-text">Start Your Journey with Shebs</h2>
+        </div>
+    </section>
+    
+    <section class="adventure-section">
+        <h2>Explore Real Adventure</h2>
+        <div class="adventure-cards">
+            <!-- Card 1 -->
+            <div class="adventure-card">
+                <img src="assets/Tent camping services.jpg" alt="Tent Camping Services">
+                <div class="card-content">
+                    <h3>Tent Camping Services</h3>
+                </div>
+            </div>
+            <!-- Card 2 -->
+            <div class="adventure-card">
+                <img src="assets/RV.jpg" alt="Trailers And RV Spots">
+                <div class="card-content">
+                    <h3>Trailers And RV Spots</h3>
+                </div>
+            </div>
+            <!-- Card 3 -->
+            <div class="adventure-card">
+                <img src="assets/Adventure and climbing.jpg" alt="Adventure And Climbing">
+                <div class="card-content">
+                    <h3>Adventure And Climbing</h3>
+                </div>
+            </div>
+            <!-- Card 4 -->
+            <div class="adventure-card">
+                <img src="assets/Couple camping or cabin.jpg" alt="Couple Camping Or Cabin">
+                <div class="card-content">
+                    <h3>Couple Camping Or Cabin</h3>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="services-overview reveal">
+        <h2>Explore Our Services</h2>
+        <div class="services-cards">
+            <!-- Service 1 -->
+            <div class="service-card">
+                <i class="fas fa-hiking"></i>
+                <h3>Mountain Hiking</h3>
+                <p>Embark on an unforgettable hiking experience across breathtaking landscapes.</p>
+            </div>
+            <!-- Service 2 -->
+            <div class="service-card">
+                <i class="fas fa-ship"></i>
+                <h3>Boat Tours</h3>
+                <p>Relax and enjoy scenic boat tours through stunning waterways.</p>
+            </div>
+            <!-- Service 3 -->
+            <div class="service-card">
+                <i class="fas fa-campground"></i>
+                <h3>Camping Adventures</h3>
+                <p>Experience the thrill of camping in picturesque locations.</p>
+            </div>
+            <!-- Service 4 -->
+            <div class="service-card">
+                <i class="fas fa-bicycle"></i>
+                <h3>Mountain Biking</h3>
+                <p>Take on rugged terrains and trails with our mountain biking packages.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="travel-stats reveal">
+        <div class="content-container">
+            <div class="stat-heading">
+                <span>Are You Ready To Explore?</span>
+                <h2>Embark On A Journey With Real Adventures & Enjoy Nature</h2>
+                <button class="availability-btn">Check Availability</button>
+            </div>
+            <div class="stats-container">
+                <div class="stat-item">
+                    <i class="icon fa fa-hiking"></i>
+                    <h3 class="count" data-target="1024">0</h3>
+                    <p>Happy Travelers</p>
+                </div>
+                <div class="stat-item">
+                    <i class="icon fa fa-campground"></i>
+                    <h3 class="count" data-target="789">0</h3>
+                    <p>Tent Sites</p>
+                </div>
+                <div class="stat-item">
+                    <i class="icon fa fa-star"></i>
+                    <h3 class="count" data-target="1200">0</h3>
+                    <p>Positive Reviews</p>
+                </div>
+                <div class="stat-item">
+                    <i class="icon fa fa-trophy"></i>
+                    <h3 class="count" data-target="980">0</h3>
+                    <p>Awards Won</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    
+    
+
+    <section class="experience-section reveal">
+        <!-- Image Section -->
+        <div class="experience-image">
+            <img src="assets/adventure bg 2.jpg" alt="Adventure Experience">
+        </div>
+        <!-- Content Section -->
+        <div class="experience-content">
+            <div class="experience-header">
+                <h3>Who We Are</h3>
+            </div>
+            <h2>Great Opportunity For Adventure & Travels</h2>
+            
+            <!-- Services List -->
+            <ul class="services-list">
+                <li>
+                    <i class="fa fa-mountain"></i>
+                    <div class="service-info">
+                        <span>Mountain Hiking</span>
+                        <p>Explore breathtaking trails and enjoy the beauty of nature.</p>
+                    </div>
+                </li>
+                <li>
+                    <i class="fa fa-bicycle"></i>
+                    <div class="service-info">
+                        <span>Mountain Biking</span>
+                        <p>Experience thrilling rides on scenic mountain paths.</p>
+                    </div>
+                </li>
+                <li>
+                    <i class="fa fa-ship"></i>
+                    <div class="service-info">
+                        <span>Fishing & Boat</span>
+                        <p>Enjoy peaceful fishing trips and adventurous boat rides.</p>
+                    </div>
+                </li>
+            </ul>
+            
+    
+            <!-- Experience Years Section -->
+            <div class="experience-years-section">
+                <div class="experience-number-box">
+                    <span class="experience-number">28</span>
+                    <span class="experience-years">Years Of Experience</span>
+                </div>
+            </div>
+    
+            <!-- Action Buttons -->
+            <div class="action-buttons">
+                <a href="#" class="discover-more">Discover More</a>
+                <a href="tel:+918888888888" class="call-experts">
+                    <i class="fa fa-phone"></i> Call Experts (+91) 8888888888
+                </a>
+            </div>
+        </div>
+    </section>
+    
+    <section class="popular-tours reveal">
+        <div class="section-header">
+            <span class="section-subtitle">Popular Tours</span>
+            <h2>Amazing Tour Places Around The World</h2>
+        </div>
+        <div class="tour-cards">
+            <div class="tour-card">
+                <div class="featured-badge">Featured</div>
+                <img src="assets/tour bg 7.jpg" alt="Discovery Island Kayak Tour">
+                <div class="tour-info">
+                    <h3>Discovery Island Kayak Tour</h3>
+                    <p><i class="fas fa-map-marker-alt location-icon"></i> Main Street, Brooklyn, NY</p>
+                    <p class="price">From $129.00</p>
+                    <div class="tour-details">
+                        <span><i class="fas fa-clock duration-icon"></i> 3 days</span>
+                        <span><i class="fas fa-users people-icon"></i> 10</span>
+                        <a href="#" class="explore-link">Explore →</a>
+                    </div>
+                </div>
+            </div>
+            <div class="tour-card">
+                <div class="featured-badge">Featured</div>
+                <img src="assets/tour bg 8.jpg" alt="The French Alps Kayak Tour">
+                <div class="tour-info">
+                    <h3>Discovery Island Kayak Tour</h3>
+                    <p><i class="fas fa-map-marker-alt location-icon"></i> Main Street, Brooklyn, NY</p>
+                    <p class="price">From $129.00</p>
+                    <div class="tour-details">
+                        <span><i class="fas fa-clock duration-icon"></i> 3 days</span>
+                        <span><i class="fas fa-users people-icon"></i> 10</span>
+                        <a href="#" class="explore-link">Explore →</a>
+                    </div>
+                </div>
+            </div>
+            <div class="tour-card">
+                <div class="featured-badge">Featured</div>
+                <img src="assets/tour bg 1.jpg" alt="Halong Bay Kayak Tour">
+                <div class="tour-info">
+                    <h3>Discovery Island Kayak Tour</h3>
+                    <p><i class="fas fa-map-marker-alt location-icon"></i> Main Street, Brooklyn, NY</p>
+                    <p class="price">From $129.00</p>
+                    <div class="tour-details">
+                        <span><i class="fas fa-clock duration-icon"></i> 3 days</span>
+                        <span><i class="fas fa-users people-icon"></i> 10</span>
+                        <a href="#" class="explore-link">Explore →</a>
+                    </div>
+                </div>
+            </div>
+            <div class="tour-card">
+                <div class="featured-badge">Featured</div>
+                <img src="assets/tour bg 2.jpg" alt="Sea of Cortez Kayak Tour">
+                <div class="tour-info">
+                    <h3>Discovery Island Kayak Tour</h3>
+                    <p><i class="fas fa-map-marker-alt location-icon"></i> Main Street, Brooklyn, NY</p>
+                    <p class="price">From $129.00</p>
+                    <div class="tour-details">
+                        <span><i class="fas fa-clock duration-icon"></i> 3 days</span>
+                        <span><i class="fas fa-users people-icon"></i> 10</span>
+                        <a href="#" class="explore-link">Explore →</a>
+                    </div>
+                </div>
+            </div>
+            <div class="tour-card">
+                <div class="featured-badge">Featured</div>
+                <img src="assets/tour bg 3.jpg" alt="Na Pali Coast Kayak Tour">
+                <div class="tour-info">
+                    <h3>Discovery Island Kayak Tour</h3>
+                    <p><i class="fas fa-map-marker-alt location-icon"></i> Main Street, Brooklyn, NY</p>
+                    <p class="price">From $129.00</p>
+                    <div class="tour-details">
+                        <span><i class="fas fa-clock duration-icon"></i> 3 days</span>
+                        <span><i class="fas fa-users people-icon"></i> 10</span>
+                        <a href="#" class="explore-link">Explore →</a>
+                    </div>
+                </div>
+            </div>
+            <div class="tour-card">
+                <div class="featured-badge">Featured</div>
+                <img src="assets/tour bg 4.jpg" alt="Soca River Kayak Tour">
+                <div class="tour-info">
+                    <h3>Discovery Island Kayak Tour</h3>
+                    <p><i class="fas fa-map-marker-alt location-icon"></i> Main Street, Brooklyn, NY</p>
+                    <p class="price">From $129.00</p>
+                    <div class="tour-details">
+                        <span><i class="fas fa-clock duration-icon"></i> 3 days</span>
+                        <span><i class="fas fa-users people-icon"></i> 10</span>
+                        <a href="#" class="explore-link">Explore →</a>
+                    </div>
+                </div>
+            </div>
+            <div class="tour-card">
+                <div class="featured-badge">Featured</div>
+                <img src="assets/tour bg 5.jpg" alt="Lake Baikal Kayak Tour">
+                <div class="tour-info">
+                    <h3>Discovery Island Kayak Tour</h3>
+                    <p><i class="fas fa-map-marker-alt location-icon"></i> Main Street, Brooklyn, NY</p>
+                    <p class="price">From $129.00</p>
+                    <div class="tour-details">
+                        <span><i class="fas fa-clock duration-icon"></i> 3 days</span>
+                        <span><i class="fas fa-users people-icon"></i> 10</span>
+                        <a href="#" class="explore-link">Explore →</a>
+                    </div>
+                </div>
+            </div>
+            <div class="tour-card">
+                <div class="featured-badge">Featured</div>
+                <img src="assets/tour bg 6.jpg" alt="Lake Tahoe Kayak Tour">
+                <div class="tour-info">
+                    <h3>Discovery Island Kayak Tour</h3>
+                    <p><i class="fas fa-map-marker-alt location-icon"></i> Main Street, Brooklyn, NY</p>
+                    <p class="price">From $129.00</p>
+                    <div class="tour-details">
+                        <span><i class="fas fa-clock duration-icon"></i> 3 days</span>
+                        <span><i class="fas fa-users people-icon"></i> 10</span>
+                        <a href="#" class="explore-link">Explore →</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    
+    <section class="testimonial-section">
+        <div class="testimonial-content">
+            <span class="testimonial-tag">Our Testimonial</span>
+            <h2>What They're Talking About Us</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut vestibulum dapibus augue. Proin mollis ipsum vitae finibus suscipit.</p>
+            <button class="discover-btn">Discover More</button>
+        </div>
+        <div class="testimonial-box">
+            <div class="rating">
+                <span>★★★★★</span>
+                <span class="score">99</span>
+            </div>
+            <p class="testimonial-text">Lorem Ipsum Dolor Sit Amet, Consectetur Adipiscing Elit. Ut Vestibulum Dapibus Augue. Proin Mollis Dapibus Augueipsum Vitae Finibus Suscipit.</p>
+            <div class="testimonial-author">
+                <img src="assets/CEO.jpg" alt="Zain">
+                <div>
+                    <h4>Muhammad Zain</h4>
+                    <p>Founder & CEO</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+
+    <!-- Footer Section -->
+    <footer class="footer">
+        <div class="footer-container">
+            <!-- Brand and Description -->
+            <div class="footer-brand">
+                <h2>Shebs</h2>
+                <p>Discover unforgettable travel experiences with Shebs, where every adventure is crafted to inspire.</p>
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+            </div>
+    
+            <!-- Quick Links -->
+            <div class="footer-links">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About Us</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#testimonial">Testimonial</a></li>
+                    <li><a href="#contact">Contact Us</a></li>
+                </ul>
+            </div>
+    
+            <!-- Contact Form -->
+            <div class="footer-contact">
+                <h3>Contact Us</h3>
+                <form action="#">
+                    <div class="form-group">
+                        <input type="text" placeholder="Full Name">
+                        <input type="email" placeholder="Email Address">
+                    </div>
+                    <div class="form-group">
+                        <input type="text" placeholder="Contact Number">
+                        <input type="text" placeholder="Country">
+                    </div>
+                    <textarea placeholder="Your Message"></textarea>
+                    <button type="submit">Send Message</button>
+                </form>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>Powered by Shebs</p>
+        </div>
+    </footer>
+
+    <button id="backToTop" onclick="scrollToTop()">↑</button>
+
+
+
+    <script src="main.js"></script>
+</body>
+</html>
