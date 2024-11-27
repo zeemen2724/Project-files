@@ -796,24 +796,10 @@ html {
     cursor: pointer;
 }
 
-
-/* Responsive Styles */
-.menu-btn {
-    display: none; /* Hidden by default */
-    background: none;
-    border: none;
-    color: white;
-    font-size: 2rem;
-    cursor: pointer;
-}
-
-@media (max-width: 1000px) {
-    .menu-btn {
-        display: block; /* Show menu button */
-    }
-
+/* Responsive Navbar */
+@media (max-width: 768px) {
     .nav-links {
-        display: none; /* Initially hidden on small screens */
+        display: none; /* Initially hidden */
         flex-direction: column;
         position: absolute;
         top: 60px;
@@ -822,13 +808,14 @@ html {
         width: 100%;
         padding: 10px 0;
         box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+        z-index: 1000;
     }
 
     .nav-links.show {
-        display: flex; /* Toggle visibility when menu is clicked */
+        display: flex; /* Show when toggled */
     }
 
-    .dropdown-content {
-        position: relative;
+    .menu-btn {
+        display: block; /* Show menu button on smaller screens */
     }
 }
