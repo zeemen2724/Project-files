@@ -638,3 +638,197 @@ html {
 .footer-bottom p {
     margin: 0;
 }
+
+
+/* Existing styles remain unchanged */
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+    .guide-container {
+        flex-direction: column;
+        gap: 20px;
+        padding: 20px;
+    }
+
+    .guide-image img {
+        max-width: 250px;
+    }
+
+    .guide-content {
+        text-align: center;
+    }
+
+    .how-we-do-it h2 {
+        font-size: 2rem;
+    }
+
+    .process-grid {
+        grid-template-columns: repeat(3, 1fr); /* 3 items per row */
+    }
+}
+
+@media (max-width: 992px) {
+    .navbar {
+        padding: 0 10px;
+        height: auto;
+        flex-wrap: wrap;
+    }
+
+    .nav-links {
+        flex-direction: column;
+        gap: 10px;
+        text-align: center;
+    }
+
+    .process-grid {
+        grid-template-columns: repeat(2, 1fr); /* 2 items per row */
+    }
+
+    .slider .text h1 {
+        font-size: 3rem;
+    }
+
+    .slider .text h2 {
+        font-size: 1.5rem;
+    }
+
+    .slider .btn {
+        font-size: 0.9rem;
+        padding: 10px 20px;
+    }
+}
+
+@media (max-width: 768px) {
+    .navbar .logo {
+        font-size: 18px;
+    }
+
+    .nav-links a {
+        font-size: 14px;
+    }
+
+    .login-btn {
+        font-size: 14px;
+        padding: 6px 12px;
+    }
+
+    .process-grid {
+        grid-template-columns: 1fr; /* 1 item per row */
+    }
+
+    .guide-content h2 {
+        font-size: 1.8rem;
+    }
+
+    .footer-container {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 20px;
+    }
+}
+
+@media (max-width: 576px) {
+    .slider .text h1 {
+        font-size: 2.5rem;
+    }
+
+    .slider .text h2 {
+        font-size: 1.2rem;
+    }
+
+    .btn {
+        font-size: 0.8rem;
+        padding: 8px 16px;
+    }
+
+    .guide-container {
+        gap: 10px;
+    }
+
+    .guide-image img {
+        max-width: 200px;
+    }
+
+    .footer p {
+        font-size: 12px;
+    }
+
+    .footer h2 {
+        font-size: 18px;
+    }
+}
+
+/* Navbar Styles */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+    background-color: #333;
+    color: white;
+}
+
+.logo {
+    font-size: 1.5rem;
+}
+
+.nav-links {
+    display: flex;
+    gap: 20px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 1rem;
+}
+
+.menu-btn {
+    display: none; /* Hidden by default */
+    background: none;
+    border: none;
+    color: white;
+    font-size: 1.8rem;
+    cursor: pointer;
+}
+
+
+/* Responsive Styles */
+.menu-btn {
+    display: none; /* Hidden by default */
+    background: none;
+    border: none;
+    color: white;
+    font-size: 2rem;
+    cursor: pointer;
+}
+
+@media (max-width: 1000px) {
+    .menu-btn {
+        display: block; /* Show menu button */
+    }
+
+    .nav-links {
+        display: none; /* Initially hidden on small screens */
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        right: 0;
+        background-color: #333;
+        width: 100%;
+        padding: 10px 0;
+        box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    .nav-links.show {
+        display: flex; /* Toggle visibility when menu is clicked */
+    }
+
+    .dropdown-content {
+        position: relative;
+    }
+}

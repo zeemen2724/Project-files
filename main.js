@@ -152,3 +152,13 @@ document.querySelector('.prev').addEventListener('click', prevSlide);
 
 setInterval(nextSlide, 5000);
 
+
+document.addEventListener("DOMContentLoaded", function () {
+    const menuBtn = document.querySelector(".menu-btn");
+    const navLinks = document.querySelector(".nav-links");
+
+    // Toggle visibility of the nav-links on click
+    menuBtn.addEventListener("click", () => {
+        navLinks.classList.toggle("show");
+    });
+});
