@@ -44,6 +44,7 @@ html {
     font-weight: bold;
     color: var(--dark-green);
 }
+
 .nav-links {
     list-style: none;
     display: flex;
@@ -61,8 +62,8 @@ html {
     color: var(--dark-green);
     text-decoration: none;
     font-size: 16px;
-    position: relative; 
-    padding-bottom: 5px; 
+    position: relative;
+    padding-bottom: 5px;
 }
 
 .nav-links a::after {
@@ -70,11 +71,11 @@ html {
     position: absolute;
     left: 0;
     bottom: 0;
-    width: 100%; 
-    height: 2px; 
-    background-color: var(--olive-green); 
-    transform: scaleX(0); 
-    transition: transform 0.3s ease-in-out; 
+    width: 100%;
+    height: 2px;
+    background-color: var(--olive-green);
+    transform: scaleX(0);
+    transition: transform 0.3s ease-in-out;
 }
 
 .nav-links a:hover::after {
@@ -102,6 +103,7 @@ html {
     background-color: var(--olive-green);
     box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.3);
 }
+
 .dropdown {
     position: relative;
     display: inline-block;
@@ -140,7 +142,7 @@ html {
 }
 
 
-.dropdown:hover > .dropdown-content {
+.dropdown:hover>.dropdown-content {
     display: block;
 }
 
@@ -155,7 +157,7 @@ html {
     display: none;
 }
 
-.dropdown-content .dropdown:hover > .dropdown-content {
+.dropdown-content .dropdown:hover>.dropdown-content {
     display: block;
 }
 
@@ -280,6 +282,11 @@ html {
     transform: translateY(0);
 }
 
+
+
+
+
+
 .space {
     position: relative;
     height: 30vh;
@@ -289,29 +296,156 @@ html {
     align-items: center;
     overflow: hidden;
     margin-bottom: 30px;
-    background-color: #f9f9f9;
+    background-color: white;
 }
 
-.overlap {
-    width: 100%;
+
+.text-layer {
+    position: relative;
     text-align: center;
-    color: #ffffff;
+}
+
+
+.foreground-text {
+    font-size: 3em;
+    color: #181C14;
+    font-weight: bold;
+    position: relative;
+    z-index: 2;
+    margin: 0;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+
+
+
+
+
+
+
+
+/* General styling for the section */
+.team-section {
+    position: relative;
+    width: 100%;
+    height: 400px;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Video background styling */
+.team-video {
     position: absolute;
-    transform: translate(-50%, -50%);
-    top: 50%;
-    left: 50%;
-    font-weight: 800;
-    background-color: #f9f9f9;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: brightness(0.3);
+    /* Makes the video dark */
+    z-index: -1;
+    /* Ensures video stays in the background */
 }
 
-.overlap span {
-    font-size: 22vw;
-    text-shadow: -0.08em 0.03em 0.12em rgba(0, 0, 0, 0.7);
+/* Styling for the team cards container */
+.team-cards {
+    display: flex;
+    gap: 10px;
+    z-index: 1;
+    justify-content: center;
 }
 
-.overlap span:not(:first-child) {
-    margin-left: -0.18em;
+.team-card {
+    flex: 0 0 160px;
+    border-radius: 0.5rem;
+    transition: 0.5s ease-in-out;
+    cursor: pointer;
+    box-shadow: 1px 5px 15px #1e0e3e;
+    position: relative;
+    overflow: hidden;
 }
+
+.team-card:nth-of-type(1) {
+    background: url("/assets/Brazil.jpg") no-repeat 50% / cover;
+}
+
+.team-card:nth-of-type(2) {
+    background: url("/assets/China.jpg") no-repeat 50% / cover;
+}
+
+.team-card:nth-of-type(3) {
+    background: url("/assets/italy.jpg") no-repeat 50% / cover;
+}
+
+.team-card:nth-of-type(4) {
+    background: url("/assets/united\ kingdom.jpg") no-repeat 50% / cover;
+}
+
+.team-card:nth-of-type(5) {
+    background: url("/assets/France.jpg") no-repeat 50% / cover;
+}
+
+.team-card:nth-of-type(6) {
+    background: url("/assets/Spain.jpg") no-repeat 50% / cover;
+}
+
+.team-card:nth-of-type(7) {
+    background: url("/assets/Australia.jpg") no-repeat 50% / cover;
+}
+
+.team-card-content {
+    font-size: 1.5rem;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    padding: 15px;
+    opacity: 0;
+    flex-direction: column;
+    height: 100%;
+    justify-content: flex-end;
+    background: rgb(2, 2, 46);
+    background: linear-gradient(0deg,
+            rgba(2, 2, 46, 0.6755077030812324) 0%,
+            rgba(255, 255, 255, 0) 100%);
+    transform: translatey(100%);
+    transition: opacity 0.5s ease-in-out, transform 0.5s 0.2s;
+    visibility: hidden;
+}
+
+.team-card:hover {
+    flex: 0 0 250px;
+    box-shadow: 1px 3px 15px #7645d8;
+    transform: translatey(-30px);
+}
+
+.team-card:hover .team-card-content {
+    opacity: 1;
+    transform: translatey(0%);
+    visibility: visible;
+}
+
+.team-card-content span {
+    display: block;
+    margin-top: 5px;
+    font-size: 1.2rem;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -430,69 +564,321 @@ html {
 
 
 
-
-
-/* Section Styling */
-.how-we-do-it {
-    text-align: center;
-    padding: 50px 20px;
-    background-color: #f5f5f5;
+.services-section {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    padding: 20px 40px;
 }
 
-.how-we-do-it h2 {
-    font-size: 2.5rem;
-    margin-bottom: 40px;
+.service-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    flex-wrap: wrap;
+    padding: 25px 10px;
+}
+
+.service-row img {
+    max-width: 400px;
+    width: 100%;
+    border-radius: 8px;
+}
+
+.service-text {
+    flex: 1;
+    max-width: 500px;
+    text-align: left;
+}
+
+.service-text h3 {
+    font-size: 1.8rem;
+    margin-bottom: 10px;
     color: #333;
 }
 
-/* Grid Layout */
-.process-grid {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    /* 4 items per row */
-    gap: 20px;
-    max-width: 1200px;
+.service-text p {
+    font-size: 1rem;
+    color: #555;
+    margin-bottom: 20px;
+}
+
+.service-text a {
+    display: inline-block;
+    text-decoration: none;
+    color: #fff;
+    background-color: #007bff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.service-text a:hover {
+    background-color: #0056b3;
+}
+
+.service-row:nth-child(even) {
+    flex-direction: row-reverse;
+}
+
+@media (max-width: 768px) {
+    .service-row {
+        flex-direction: column;
+    }
+
+    .service-row:nth-child(even) {
+        flex-direction: column;
+    }
+
+    .service-text {
+        text-align: center;
+    }
+}
+
+
+
+
+
+/*** 
+
+====================================================================
+		Testimonial Section
+====================================================================
+
+***/
+
+.large-container {
+    position: static;
+    max-width: 1580px;
+    padding: 0px 30px;
     margin: 0 auto;
 }
 
-/* Process Item Styling */
-.process-item {
-    background-color: #ffffff;
-    border-radius: 8px;
-    padding: 20px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    text-align: center;
-    height: 150px;
+.testimonial-section {
+    position: relative;
+    padding-top: 80px;
+    padding-bottom: 210px;
+    overflow: hidden;
+
+    &:before {
+        position: absolute;
+        left: -200px;
+        top: 22%;
+        background-image: url(http://t.commonsupport.com/adro/images/icons/ring-circle.png);
+        background-repeat: no-repeat;
+        background-position: center;
+        width: 701px;
+        height: 756px;
+        content: "";
+        -webkit-animation: fa-spin 25s infinite alternate;
+        -moz-animation: fa-spin 25s infinite alternate;
+        -ms-animation: fa-spin 25s infinite alternate;
+        -o-animation: fa-spin 25s infinite alternate;
+        animation: fa-spin 25s infinite alternate;
+    }
+
+    .sec-title {
+        position: relative;
+        margin-bottom: 10px;
+
+        .title {
+            margin-bottom: 20px;
+        }
+    }
+
+    .testimonial-carousel {
+        position: relative;
+        max-width: 1100px;
+        margin: 0 -50px;
+    }
+}
+
+.testimonial-block {
+    position: relative;
+    padding: 50px;
+
+    .inner-box {
+        padding: 80px 105px;
+        background-color: #ffffff;
+        box-shadow: 0 0 50px rgba(226, 222, 232, 0.75);
+    }
+
+    .text {
+        position: relative;
+        display: block;
+        font-size: 18px;
+        line-height: 32px;
+        color: #282331;
+        font-weight: 400;
+        margin-bottom: 50px;
+        font-family: "Muli", sans-serif;
+    }
+
+    .info-box {
+        position: relative;
+        padding-left: 115px;
+        padding-top: 10px;
+
+        .thumb {
+            position: absolute;
+            left: 0;
+            top: 0;
+            height: 82px;
+            width: 82px;
+
+            img {
+                border: 6px solid #e5e6fa;
+                border-radius: 50%;
+                overflow: hidden;
+                display: block;
+                width: 100%;
+                box-shadow: 0 45px 45px rgba(147, 147, 147, 0.35);
+            }
+        }
+
+        .name {
+            position: relative;
+            display: block;
+            font-size: 21px;
+            line-height: 1.2em;
+            color: #382c4d;
+            font-weight: 700;
+            margin-bottom: 10px;
+            font-family: "Niramit", sans-serif;
+        }
+
+        .designation {
+            position: relative;
+            display: block;
+            font-size: 16px;
+            line-height: 24px;
+            color: #8053f7;
+            font-weight: 400;
+            font-family: "Muli", sans-serif;
+        }
+    }
+}
+
+.testimonial-carousel {
+    .owl-nav {
+        position: absolute;
+        right: 75px;
+        bottom: 70px;
+    }
+
+    .owl-next,
+    .owl-prev {
+        position: relative;
+        display: inline-block;
+        height: 75px;
+        width: 75px;
+        line-height: 75px;
+        text-align: center;
+        border-radius: 50%;
+        background-color: #ffffff;
+        -webkit-transition: all 300ms ease;
+        -moz-transition: all 300ms ease;
+        -ms-transition: all 300ms ease;
+        -o-transition: all 300ms ease;
+        transition: all 300ms ease;
+    }
+
+    .owl-next:hover,
+    .owl-prev:hover {
+        background-color: #00df97;
+        box-shadow: 0 24px 24px rgba(187, 187, 187, 0.75);
+    }
+}
+
+.arrow-right,
+.arrow-left {
+    position: relative;
+    display: inline-block;
+    height: 9px;
+    width: 43px;
+    background-image: url(http://t.commonsupport.com/adro/images/icons/arrow-left-2.png);
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.arrow-right {
+    background-image: url(http://t.commonsupport.com/adro/images/icons/arrow-right-2.png);
+}
+
+.testimonial-section .thumb-layer {
+    position: absolute;
+    right: 30px;
+    top: 120px;
+
+    .image {
+        position: relative;
+        margin-right: 0;
+
+        img {
+            display: inline-block;
+            max-width: 100%;
+            height: auto;
+        }
+    }
+}
+
+@media only screen and (max-width: 767px) {
+    .testimonial-section .sec-title {
+        margin-bottom: 50px;
+    }
+
+    .testimonial-block {
+        padding: 0;
+
+        .inner-box {
+            box-shadow: none;
+            border: 2px solid #f1f1f1;
+        }
+    }
+
+    .testimonial-carousel {
+        .owl-nav {
+            position: relative;
+            left: 0;
+            bottom: 0;
+            margin-top: 20px;
+            text-align: center;
+        }
+
+        .owl-next,
+        .owl-prev {
+            border: 2px solid #f1f1f1;
+        }
+    }
+}
+
+@media only screen and (max-width: 1366px) {
+    .large-container {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+}
+
+
+.space-testimonial{
+    position: relative;
+    height: 15vh;
     display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    overflow: hidden;
+    background-color: white;
 }
 
-.process-item i {
-    font-size: 2.5rem;
-    /* Icon size */
-    color: #0056b3;
-    /* Icon color */
-    margin-bottom: 10px;
+.background-testi-text {
+    font-size: 2em;
+    color: rgba(0, 0, 0, 0.1);
+    font-weight: bold;
+    position: absolute;
+    left: 440px;
+    transform: translate(-50%, 10%);
+    
 }
-
-.process-item h3 {
-    font-size: 1.2rem;
-    /* Text size */
-    color: #333;
-    /* Text color */
-    margin: 0;
-}
-
-
-
-
-
-
-
-
-
 
 
 .footer {
