@@ -146,7 +146,7 @@ const prevSlide = () => {
     slides[currentSlide].classList.add('active');
 };
 
-document.querySelector('.next').addEventListener('click', nextSlide);
+//document.querySelector('.next').addEventListener('click', nextSlide);
 document.querySelector('.prev').addEventListener('click', prevSlide);
 
 
