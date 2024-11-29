@@ -1,16 +1,16 @@
 document.addEventListener('DOMContentLoaded', () => {
-    
+
     const participantsInput = document.getElementById('participants');
     const increaseBtn = document.getElementById('increase');
     const decreaseBtn = document.getElementById('decrease');
-    
+
     if (participantsInput && increaseBtn && decreaseBtn) {
-        
+
         increaseBtn.addEventListener('click', () => {
             participantsInput.value = parseInt(participantsInput.value) + 1;
         });
 
-        
+
         decreaseBtn.addEventListener('click', () => {
             if (parseInt(participantsInput.value) > 1) {
                 participantsInput.value = parseInt(participantsInput.value) - 1;
@@ -18,15 +18,15 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    
+
     const sections = document.querySelectorAll(".reveal");
-    
+
     function revealOnScroll() {
-        const revealPoint = 150; 
+        const revealPoint = 150;
         sections.forEach((section) => {
             const windowHeight = window.innerHeight;
             const sectionTop = section.getBoundingClientRect().top;
-            
+
             if (sectionTop < windowHeight - revealPoint) {
                 section.classList.add("active");
             } else {
@@ -34,11 +34,11 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
     }
-  
+
     window.addEventListener("scroll", revealOnScroll);
     revealOnScroll();
 
-    
+
     const cards = document.querySelectorAll('.tour-card');
 
     const scrollReveal = () => {
@@ -53,13 +53,13 @@ document.addEventListener('DOMContentLoaded', () => {
     };
 
     window.addEventListener('scroll', scrollReveal);
-    scrollReveal(); 
+    scrollReveal();
 
-    
+
     const backToTopButton = document.getElementById("backToTop");
 
     if (backToTopButton) {
-        window.onscroll = function() {
+        window.onscroll = function () {
             if (document.documentElement.scrollTop > 300) {
                 backToTopButton.style.display = "block";
             } else {
@@ -67,12 +67,12 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         };
 
-        backToTopButton.addEventListener('click', function() {
+        backToTopButton.addEventListener('click', function () {
             window.scrollTo({ top: 0, behavior: 'smooth' });
         });
     }
 
-    
+
     const listItems = document.querySelectorAll(".services-list li");
 
     function revealListItems() {
@@ -80,20 +80,20 @@ document.addEventListener('DOMContentLoaded', () => {
         listItems.forEach((item, index) => {
             const itemTop = item.getBoundingClientRect().top;
 
-            if (itemTop < windowHeight - 100) { 
+            if (itemTop < windowHeight - 100) {
                 setTimeout(() => {
                     item.classList.add("active");
-                }, index * 200); 
+                }, index * 200);
             }
         });
     }
 
     window.addEventListener("scroll", revealListItems);
-    revealListItems(); 
+    revealListItems();
 
-    
+
     const counters = document.querySelectorAll('.count');
-    const statsSection = document.querySelector('.travel-stats'); 
+    const statsSection = document.querySelector('.travel-stats');
     let statsAnimated = false;
 
     function animateCounters() {
@@ -103,24 +103,24 @@ document.addEventListener('DOMContentLoaded', () => {
                     const target = +counter.getAttribute('data-target');
                     const count = +counter.innerText;
 
-                    
-                    const increment = target / 200; 
+
+                    const increment = target / 200;
 
                     if (count < target) {
                         counter.innerText = Math.ceil(count + increment);
-                        setTimeout(updateCount, 20); 
+                        setTimeout(updateCount, 20);
                     } else {
                         counter.innerText = target;
                     }
                 };
                 updateCount();
             });
-            statsAnimated = true; 
+            statsAnimated = true;
         }
     }
 
     window.addEventListener("scroll", animateCounters);
-    animateCounters(); 
+    animateCounters();
 });
 
 
@@ -167,36 +167,60 @@ document.addEventListener("DOMContentLoaded", function () {
 
 // ==================================services===================================
 
-(function($) {
-	
-	"use strict";
-	
-	// Testimonial Carousel
-	if ($('.testimonial-carousel').length) {
-		$('.testimonial-carousel').owlCarousel({
-			animateOut: 'slideOutDown',
-		    animateIn: 'zoomIn',
-			loop:true,
-			margin:0,
-			nav:true,
-			smartSpeed: 300,
-			autoplay: 7000,
-			navText: [ '<span class="arrow-left"></span>', '<span class="arrow-right"></span>' ],
-			responsive:{
-				0:{
-					items:1
-				},
-				600:{
-					items:1
-				},
-				800:{
-					items:1
-				},
-				1024:{
-					items:1
-				}
-			}
-		});  		
-	}
-	
+(function ($) {
+
+    "use strict";
+
+    // Testimonial Carousel
+    if ($('.testimonial-carousel').length) {
+        $('.testimonial-carousel').owlCarousel({
+            animateOut: 'slideOutDown',
+            animateIn: 'zoomIn',
+            loop: true,
+            margin: 0,
+            nav: true,
+            smartSpeed: 300,
+            autoplay: 7000,
+            navText: ['<span class="arrow-left"></span>', '<span class="arrow-right"></span>'],
+            responsive: {
+                0: {
+                    items: 1
+                },
+                600: {
+                    items: 1
+                },
+                800: {
+                    items: 1
+                },
+                1024: {
+                    items: 1
+                }
+            }
+        });
+    }
+
 })(window.jQuery);
+
+
+// ===================================services12345===============================
+
+const destinations = [
+    "San Francisco",
+    "New York",
+    "Paris",
+    "Tokyo",
+    "Dubai"
+];
+let index = 0;
+
+function updateDestination() {
+    const destinationElement = document.getElementById("dynamic-destination");
+    destinationElement.textContent = destinations[index];
+    index = (index + 1) % destinations.length;
+}
+
+// Change the destination every 2 seconds
+setInterval(updateDestination, 2000);
+
+// Set the initial destination
+updateDestination();
