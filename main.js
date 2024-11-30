@@ -204,23 +204,4 @@ document.addEventListener("DOMContentLoaded", function () {
 
 // ===================================services12345===============================
 
-const destinations = [
-    "San Francisco",
-    "New York",
-    "Paris",
-    "Tokyo",
-    "Dubai"
-];
-let index = 0;
 
-function updateDestination() {
-    const destinationElement = document.getElementById("dynamic-destination");
-    destinationElement.textContent = destinations[index];
-    index = (index + 1) % destinations.length;
-}
-
-// Change the destination every 2 seconds
-setInterval(updateDestination, 2000);
-
-// Set the initial destination
-updateDestination();
