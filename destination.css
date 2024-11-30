@@ -1,0 +1,378 @@
+@import url("https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css');
+
+:root {
+  --primary-color: #00605f;
+  --secondary-color: #017479;
+  --text-dark: #0f172a;
+  --text-light: #94a3b8;
+  --white: #ffffff;
+  --max-width: 1400px;
+  --navbar-bg: rgba(236, 223, 204, 0.8);
+  font-family: "Merriweather", serif;
+  --dark-green: #181C14;
+  --olive-green: #3C3D37;
+  --light-olive: #697565;
+  --cream: #ECDFCC;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 60px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 0 20px;
+    background: var(--navbar-bg);
+    backdrop-filter: blur(10px);
+    color: var(--dark-green);
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+}
+
+.navbar .logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: var(--dark-green);
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    position: relative;
+}
+
+.nav-links a {
+    color: var(--dark-green);
+    text-decoration: none;
+    font-size: 16px;
+    position: relative; 
+    padding-bottom: 5px; /* Adds spacing for underline hover effect */
+}
+
+.nav-links a::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%; 
+    height: 2px; 
+    background-color: var(--olive-green); 
+    transform: scaleX(0); /* Initially hidden */
+    transform-origin: left; /* Animates from the left */
+    transition: transform 0.3s ease-in-out; /* Smooth animation */
+}
+
+.nav-links a:hover::after {
+    transform: scaleX(1); /* Expand underline on hover */
+}
+
+.nav-links a:hover {
+    color: var(--olive-green); /* Change text color on hover */
+    border-bottom: 1px solid #181C14; /* Optional border for better visuals */
+}
+
+.login-btn {
+    padding: 8px 16px;
+    background-color: var(--light-olive);
+    color: var(--cream);
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background 0.3s, box-shadow 0.3s;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.login-btn:hover {
+    background-color: var(--olive-green);
+    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 200px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+.dropdown-content li {
+    border-bottom: 1px solid #ddd;
+}
+
+.dropdown-content li:last-child {
+    border-bottom: none;
+}
+
+.dropdown-content a {
+    display: block;
+    padding: 10px 15px;
+    color: #333;
+    text-decoration: none;
+}
+
+.dropdown-content a:hover {
+    background-color: #ddd;
+}
+
+.dropdown:hover > .dropdown-content {
+    display: block;
+}
+
+.dropdown-content .dropdown {
+    position: relative;
+}
+
+.dropdown-content .dropdown-content {
+    top: 0;
+    left: 100%;
+    display: none;
+}
+
+.dropdown-content .dropdown:hover > .dropdown-content {
+    display: block;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.container {
+    background: linear-gradient(
+        to right,
+        rgba(40, 77, 31, 0.9),
+        rgba(255, 255, 255, 0)
+      ),
+      url("/assets/bgdest.jpg");
+    background-size: cover; /* Ensure the image covers the entire container */
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat; /* Prevent repetition */
+    max-width: var(--max-width);
+    min-height: 100vh;
+    margin-top: 50px;
+    display: flex;
+    padding: 30px 50px;
+    flex-direction: column;
+}
+  
+.destination__container {
+  position: relative;
+  padding: 5rem 0 5rem 5rem;
+  flex: 1;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 2rem;
+  align-items: center;
+}
+.content h1 {
+  margin-bottom: 1rem;
+  font-size: 4.5rem;
+  font-weight: 800;
+  color: var(--white);
+}
+.content h1 span {
+  -webkit-text-stroke: 2px var(--white);
+  -webkit-text-fill-color: transparent;
+}
+.content p {
+  max-width: 350px;
+  margin-bottom: 2rem;
+  line-height: 1.5rem;
+  color: var(--white);
+}
+.content .btn {
+  padding: 0.75rem 2rem;
+  outline: none;
+  border: none;
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--white);
+  background-color: var(--secondary-color);
+  cursor: pointer;
+}
+.destination__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+}
+.destination__card {
+  height: 100%;
+  background-color: var(--white);
+  box-shadow: 2px 2px 20px rgba(0, 0, 0, 0.7);
+}
+.destination__card img {
+  width: 100%;
+}
+.card__content {
+  padding: 1rem;
+}
+.card__content h4 {
+  margin-bottom: 0.5rem;
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: var(--text-dark);
+}
+.card__content p {
+  margin-bottom: 1rem;
+  font-size: 0.9rem;
+  line-height: 1.5rem;
+  color: var(--text-light);
+}
+.card__content .btn {
+  padding: 0.5rem 1rem;
+  outline: none;
+  border: none;
+  font-weight: 500;
+  color: var(--white);
+  background-color: var(--primary-color);
+  cursor: pointer;
+}
+@media (width < 1200px) {
+  .search {
+    max-width: 235px;
+  }
+  .destination__container {
+    grid-template-columns: 1fr;
+  }
+}
+@media (width < 900px) {
+  .nav__links {
+    display: none;
+  }
+  .content h1 {
+    font-size: 4rem;
+  }
+  .destination__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (width < 600px) {
+  .search {
+    display: none;
+  }
+  .destination__container {
+    padding-left: 3rem;
+  }
+  .content h1 {
+    font-size: 3rem;
+  }
+  .destination__grid {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+.popular-destinations {
+    text-align: center;
+    padding: 2rem 1rem;
+    background-color: #fff;
+}
+
+.popular-destinations h2 {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+    color: #333;
+}
+
+.destination-cards-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    justify-content: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+.destination-card {
+    background-color: #fff;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.dest-card-down {
+    transform: translateY(10%)
+}
+
+.destination-card img {
+    width: 100%;
+    height: 350px;
+    display: block;
+}
+
+/* .destination-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+} */
+
+.destination-info {
+    padding: 1rem;
+}
+
+.destination-info h3 {
+    font-size: 1.5rem;
+    margin: 0.5rem 0;
+    color: #0f172a;
+}
+
+.destination-info p {
+    font-size: 0.7rem;
+    color: #777;
+    margin: 0;
+}
