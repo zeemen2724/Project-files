@@ -205,3 +205,26 @@ document.addEventListener("DOMContentLoaded", function () {
 // ===================================destination===============================
 
 
+const prevBtn = document.getElementById('prevBtn');
+const nextBtn = document.getElementById('nextBtn');
+const carouselTrack = document.querySelector('.carousel-track');
+
+let currentIndex = 0;
+const cardWidth = document.querySelector('.carousel-card').offsetWidth + 15; // Card width + gap
+const totalCards = document.querySelectorAll('.carousel-card').length;
+
+// Move carousel to the next set of cards
+nextBtn.addEventListener('click', () => {
+  if (currentIndex < totalCards - 4) { // Ensure we don't go past the last card
+    currentIndex++;
+    carouselTrack.style.transform = `translateX(-${currentIndex * cardWidth}px)`;
+  }
+});
+
+// Move carousel to the previous set of cards
+prevBtn.addEventListener('click', () => {
+  if (currentIndex > 0) { // Ensure we don't go past the first card
+    currentIndex--;
+    carouselTrack.style.transform = `translateX(-${currentIndex * cardWidth}px)`;
+  }
+});
