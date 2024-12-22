@@ -29,138 +29,158 @@ html {
 
 
 .navbar {
-    position: fixed;
-    top: 0;
-    width: 100%;
-    height: 60px;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    padding: 0 20px;
-    background: var(--navbar-bg);
-    backdrop-filter: blur(10px);
-    color: var(--dark-green);
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
-    z-index: 1000;
+  background: var(--navbar-bg);
+  backdrop-filter: blur(10px);
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  position: relative; /* Ensure it is positioned correctly for z-index to apply */
+  z-index: 1000; /* Ensure it stays on top */
 }
 
 .navbar .logo {
-    font-size: 24px;
-    font-weight: bold;
-    color: var(--dark-green);
+  font-size: 24px;
+  font-weight: bold;
+  color: var(--dark-green);
 }
 
 .nav-links {
-    list-style: none;
-    display: flex;
-    gap: 20px;
-    position: relative;
+  gap: 20px;
+  display: flex;
 }
 
-.nav-links a {
-    color: var(--dark-green);
-    text-decoration: none;
-    font-size: 16px;
-    position: relative; 
-    padding-bottom: 5px; /* Adds spacing for underline hover effect */
+.nav-links .nav-link {
+  color: var(--dark-green);
+  text-decoration: none;
+  font-size: 16px;
+  position: relative;
+  padding-bottom: 5px;
 }
 
-.nav-links a::after {
-    content: '';
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    width: 100%; 
-    height: 2px; 
-    background-color: var(--olive-green); 
-    transform: scaleX(0); /* Initially hidden */
-    transform-origin: left; /* Animates from the left */
-    transition: transform 0.3s ease-in-out; /* Smooth animation */
+.nav-links .nav-link:hover {
+  color: var(--olive-green);
 }
 
-.nav-links a:hover::after {
-    transform: scaleX(1); /* Expand underline on hover */
+.nav-links .nav-link::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 2px;
+  background-color: var(--olive-green);
+  transform: scaleX(0);
+  transition: transform 0.3s ease-in-out;
 }
 
-.nav-links a:hover {
-    color: var(--olive-green); /* Change text color on hover */
-    border-bottom: 1px solid #181C14; /* Optional border for better visuals */
+.nav-links .nav-link:hover::after {
+  transform: scaleX(1);
 }
 
 .login-btn {
-    padding: 8px 16px;
-    background-color: var(--light-olive);
-    color: var(--cream);
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    font-size: 16px;
-    transition: background 0.3s, box-shadow 0.3s;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+  padding: 8px 16px;
+  background-color: var(--light-olive);
+  color: var(--cream);
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background 0.3s, box-shadow 0.3s;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 .login-btn:hover {
-    background-color: var(--olive-green);
-    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.3);
+  background-color: var(--olive-green);
+  box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.3);
 }
 
 .dropdown {
-    position: relative;
-    display: inline-block;
+  position: relative;
+  display: inline-block;
 }
 
 .dropdown-content {
-    display: none;
-    position: absolute;
-    background-color: #f9f9f9;
-    min-width: 200px;
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
-    z-index: 1;
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 200px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+  z-index: 1;
 }
 
 .dropdown-content li {
-    border-bottom: 1px solid #ddd;
+  border-bottom: 1px solid #ddd;
 }
 
 .dropdown-content li:last-child {
-    border-bottom: none;
+  border-bottom: none;
 }
 
 .dropdown-content a {
-    display: block;
-    padding: 10px 15px;
-    color: #333;
-    text-decoration: none;
+  display: block;
+  padding: 10px 15px;
+  color: #333;
+  text-decoration: none;
+  position: relative;
+}
+
+/* Add underline effect for dropdown items */
+.dropdown-content .dropdown-item {
+  position: relative;
+  color: var(--dark-green);
+  text-decoration: none;
+  font-size: 16px;
+  padding: 8px 16px;
+}
+
+.dropdown-content .dropdown-item::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 2px;
+  background-color: var(--olive-green);
+  transform: scaleX(0);
+  transition: transform 0.3s ease-in-out;
+}
+
+.dropdown-content .dropdown-item:hover {
+  color: var(--olive-green); /* Optional: Change text color on hover */
+}
+
+.dropdown-content .dropdown-item:hover::after {
+  transform: scaleX(1);
 }
 
 .dropdown-content a:hover {
-    background-color: #ddd;
+  background-color: #ddd;
 }
 
 .dropdown:hover > .dropdown-content {
-    display: block;
+  display: block;
 }
 
 .dropdown-content .dropdown {
-    position: relative;
+  position: relative;
 }
 
 .dropdown-content .dropdown-content {
-    top: 0;
-    left: 100%;
-    display: none;
+  top: 0;
+  left: 100%;
+  display: none;
 }
 
 .dropdown-content .dropdown:hover > .dropdown-content {
-    display: block;
+  display: block;
 }
 
-
-
-
+.dropdown-submenu .dropdown-menu {
+  top: 0;
+  left: 100%;
+  margin-top: 0;
+}
 
 
 
