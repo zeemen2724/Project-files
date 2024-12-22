@@ -438,6 +438,18 @@ html {
     margin: 0;
 }
 
+.footer-brand, .footer-links, .footer-contact {
+    margin-bottom: 20px;
+}
+
+.social-icons a {
+    margin: 0 10px;
+    font-size: 20px;
+    color: #333;
+}
+
+
+
 .space {
     position: relative;
     height: 30vh;
