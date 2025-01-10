@@ -1,59 +1,6 @@
 document.addEventListener('DOMContentLoaded', () => {
 
-    const participantsInput = document.getElementById('participants');
-    const increaseBtn = document.getElementById('increase');
-    const decreaseBtn = document.getElementById('decrease');
 
-    if (participantsInput && increaseBtn && decreaseBtn) {
-
-        increaseBtn.addEventListener('click', () => {
-            participantsInput.value = parseInt(participantsInput.value) + 1;
-        });
-
-
-        decreaseBtn.addEventListener('click', () => {
-            if (parseInt(participantsInput.value) > 1) {
-                participantsInput.value = parseInt(participantsInput.value) - 1;
-            }
-        });
-    }
-
-
-    const sections = document.querySelectorAll(".reveal");
-
-    function revealOnScroll() {
-        const revealPoint = 150;
-        sections.forEach((section) => {
-            const windowHeight = window.innerHeight;
-            const sectionTop = section.getBoundingClientRect().top;
-
-            if (sectionTop < windowHeight - revealPoint) {
-                section.classList.add("active");
-            } else {
-                section.classList.remove("active");
-            }
-        });
-    }
-
-    window.addEventListener("scroll", revealOnScroll);
-    revealOnScroll();
-
-
-    const cards = document.querySelectorAll('.tour-card');
-
-    const scrollReveal = () => {
-        cards.forEach(card => {
-            const cardPosition = card.getBoundingClientRect().top;
-            const windowHeight = window.innerHeight;
-
-            if (cardPosition < windowHeight - 50) {
-                card.classList.add('scroll-popup');
-            }
-        });
-    };
-
-    window.addEventListener('scroll', scrollReveal);
-    scrollReveal();
 
 
     const backToTopButton = document.getElementById("backToTop");
@@ -73,6 +20,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
 
+    
     const listItems = document.querySelectorAll(".services-list li");
 
     function revealListItems() {
@@ -87,6 +35,7 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
     }
+
 
     window.addEventListener("scroll", revealListItems);
     revealListItems();
@@ -121,14 +70,11 @@ document.addEventListener('DOMContentLoaded', () => {
 
     window.addEventListener("scroll", animateCounters);
     animateCounters();
+
+
+
 });
 
-
-
-
-
-
-// ==============================================================================
 
 
 const slides = document.querySelectorAll('.slide');
@@ -140,91 +86,233 @@ const nextSlide = () => {
     slides[currentSlide].classList.add('active');
 };
 
-const prevSlide = () => {
-    slides[currentSlide].classList.remove('active');
-    currentSlide = (currentSlide - 1 + slides.length) % slides.length;
-    slides[currentSlide].classList.add('active');
-};
-
-//document.querySelector('.next').addEventListener('click', nextSlide);
-document.querySelector('.prev').addEventListener('click', prevSlide);
+setInterval(nextSlide, 3000); 
 
 
-setInterval(nextSlide, 5000);
 
 
-document.addEventListener("DOMContentLoaded", function () {
-    const menuBtn = document.querySelector(".menu-btn");
-    const navLinks = document.querySelector(".nav-links");
 
-    // Toggle visibility of the nav-links on click
-    menuBtn.addEventListener("click", () => {
-        navLinks.classList.toggle("show");
-    });
+
+
+
+
+document.addEventListener("DOMContentLoaded", () => {
+    const slider = document.querySelector('.gallery-slider');
+    let scrollAmount = 0;
+    const slideWidth = 320; 
+    
+    setInterval(() => {
+        if (scrollAmount >= slider.scrollWidth - slider.offsetWidth) {
+            scrollAmount = 0;
+        } else {
+            scrollAmount += slideWidth;
+        }
+        slider.scrollTo({ left: scrollAmount, behavior: 'smooth' });
+    }, 7000);
 });
 
 
 
-// ==================================services===================================
 
-(function ($) {
+$(document).ready(function () {
+    const products = [
+        // New Year Packages
+        {
+            name: "New Year in Paris",
+            price: "PKR 200,000",
+            description: "Celebrate New Year under the Eiffel Tower.",
+            category: "New Year",
+            image: "assets/New Year in Paris.jpg",
+            details: "Includes flight, hotel stay, and city tours."
+        },
+        {
+            name: "Dubai New Year Celebration",
+            price: "PKR 180,000",
+            description: "Watch the iconic fireworks at Burj Khalifa.",
+            category: "New Year",
+            image: "assets/Dubai New Year Celebration.jpg",
+            details: "Includes flight, 5-star hotel, and desert safari."
+        },
+        {
+            name: "New York Times Square",
+            price: "PKR 250,000",
+            description: "Experience the ball drop in Times Square.",
+            category: "New Year",
+            image: "assets/New York Times Square.jpg",
+            details: "Includes flight, hotel, and sightseeing."
+        },
+        {
+            name: "Sydney Harbor Fireworks",
+            price: "PKR 300,000",
+            description: "Celebrate New Year with a view of the Opera House.",
+            category: "New Year",
+            image: "assets/Sydney Harbor Fireworks.jpg",
+            details: "Includes flight, hotel, and harbor cruise."
+        },
+        {
+            name: "Tokyo Countdown",
+            price: "PKR 220,000",
+            description: "Ring in the New Year in vibrant Tokyo.",
+            category: "New Year",
+            image: "assets/Tokyo Countdown.jpg",
+            details: "Includes flight, hotel, and cultural tours."
+        },
+        {
+            name: "Maldives Beach Party",
+            price: "PKR 280,000",
+            description: "Enjoy a luxurious New Year on the beach.",
+            category: "New Year",
+            image: "assets/Maldives Beach Party.jpg",
+            details: "Includes flight, overwater villa, and festivities."
+        },
 
-    "use strict";
+        // Hajj/Umrah Packages
+        {
+            name: "Economy Umrah Package",
+            price: "PKR 90,000",
+            description: "Affordable Umrah package with basic amenities.",
+            category: "Hajj/Umrah",
+            image: "assets/Economy Umrah Package.jpg",
+            details: "Includes visa, accommodation, and transport."
+        },
+        {
+            name: "Deluxe Umrah Package",
+            price: "PKR 150,000",
+            description: "Comfortable Umrah with premium services.",
+            category: "Hajj/Umrah",
+            image: "assets/Deluxe Umrah Package.jpg",
+            details: "Includes visa, 4-star hotel, and guided tours."
+        },
+        {
+            name: "VIP Umrah Package",
+            price: "PKR 250,000",
+            description: "Luxury Umrah experience with exclusive facilities.",
+            category: "Hajj/Umrah",
+            image: "assets/VIP Umrah Package.jpg",
+            details: "Includes visa, 5-star hotel, and private transport."
+        },
+        {
+            name: "Family Hajj Package",
+            price: "PKR 500,000",
+            description: "Convenient Hajj package for families.",
+            category: "Hajj/Umrah",
+            image: "assets/Family Hajj.jpg",
+            details: "Includes visa, hotel, transport, and meals."
+        },
+        {
+            name: "Group Hajj Package",
+            price: "PKR 450,000",
+            description: "Affordable group Hajj package.",
+            category: "Hajj/Umrah",
+            image: "assets/group hajj.jpg",
+            details: "Includes visa, shared accommodation, and transport."
+        },
+        {
+            name: "VIP Hajj Package",
+            price: "PKR 700,000",
+            description: "Premium Hajj experience with top facilities.",
+            category: "Hajj/Umrah",
+            image: "assets/VIP Hajj.jpg",
+            details: "Includes visa, 5-star accommodation, and luxury transport."
+        },
 
-    // Testimonial Carousel
-    if ($('.testimonial-carousel').length) {
-        $('.testimonial-carousel').owlCarousel({
-            animateOut: 'slideOutDown',
-            animateIn: 'zoomIn',
-            loop: true,
-            margin: 0,
-            nav: true,
-            smartSpeed: 300,
-            autoplay: 7000,
-            navText: ['<span class="arrow-left"></span>', '<span class="arrow-right"></span>'],
-            responsive: {
-                0: {
-                    items: 1
-                },
-                600: {
-                    items: 1
-                },
-                800: {
-                    items: 1
-                },
-                1024: {
-                    items: 1
-                }
-            }
+        // Group Tours Packages
+        {
+            name: "Europe Group Tour",
+            price: "PKR 400,000",
+            description: "Explore multiple European cities with a group.",
+            category: "Group Tours",
+            image: "assets/Europe Group Tour.jpg",
+            details: "Includes flights, hotels, and guided tours."
+        },
+        {
+            name: "Turkey Group Tour",
+            price: "PKR 180,000",
+            description: "Discover the rich culture and history of Turkey.",
+            category: "Group Tours",
+            image: "assets/Turkey Group Tour.jpg",
+            details: "Includes flights, hotels, and city tours."
+        },
+        {
+            name: "Thailand Adventure",
+            price: "PKR 150,000",
+            description: "Enjoy beaches and nightlife in Thailand.",
+            category: "Group Tours",
+            image: "assets/Thailand Adventure.jpg",
+            details: "Includes flights, hotels, and adventure activities."
+        },
+        {
+            name: "Bali Island Getaway",
+            price: "PKR 200,000",
+            description: "Relax in the paradise of Bali with a group.",
+            category: "Group Tours",
+            image: "assets/Bali Island Getaway.jpg",
+            details: "Includes flights, villas, and beach activities."
+        },
+        {
+            name: "Pakistan Northern Areas",
+            price: "PKR 50,000",
+            description: "Discover the breathtaking landscapes of Pakistan.",
+            category: "Group Tours",
+            image: "assets/Pakistan Northern Areas.jpg",
+            details: "Includes transport, hotels, and guided tours."
+        },
+        {
+            name: "Egypt Historical Tour",
+            price: "PKR 300,000",
+            description: "Explore the pyramids and ancient sites of Egypt.",
+            category: "Group Tours",
+            image: "assets/Egypt Historical Tour.jpg",
+            details: "Includes flights, hotels, and guided excursions."
+        }
+    ];
+
+    function displayProducts(filteredProducts) {
+        const productsGrid = $("#productsGrid");
+        productsGrid.empty();
+        filteredProducts.forEach(product => {
+            productsGrid.append(`
+                <div class="product-card">
+                    <img src="${product.image}" alt="${product.name}">
+                    <div class="product-info">
+                        <h3>${product.name}</h3>
+                        <p>${product.description}</p>
+                        <p><strong>${product.price}</strong></p>
+                        <button class="button details-button">Details</button>
+                    </div>
+                    <div class="details">
+                        <p>${product.details}</p>
+                    </div>
+                </div>
+            `);
+        });
+
+        $(".details-button").click(function () {
+            $(this).closest(".product-card").find(".details").slideToggle();
         });
     }
 
-})(window.jQuery);
+    displayProducts(products);
 
+    $(".category-filter").change(function () {
+        const selectedCategory = $(".category-filter:checked").val();
 
-// ===================================destination===============================
+        if (selectedCategory === "All") {
+            displayProducts(products); 
+        } else {
+            const filteredProducts = products.filter(product =>
+                product.category === selectedCategory
+            );
+            displayProducts(filteredProducts);
+        }
 
-
-const prevBtn = document.getElementById('prevBtn');
-const nextBtn = document.getElementById('nextBtn');
-const carouselTrack = document.querySelector('.carousel-track');
-
-let currentIndex = 0;
-const cardWidth = document.querySelector('.carousel-card').offsetWidth + 15; // Card width + gap
-const totalCards = document.querySelectorAll('.carousel-card').length;
-
-// Move carousel to the next set of cards
-nextBtn.addEventListener('click', () => {
-  if (currentIndex < totalCards - 4) { // Ensure we don't go past the last card
-    currentIndex++;
-    carouselTrack.style.transform = `translateX(-${currentIndex * cardWidth}px)`;
-  }
-});
-
-// Move carousel to the previous set of cards
-prevBtn.addEventListener('click', () => {
-  if (currentIndex > 0) { // Ensure we don't go past the first card
-    currentIndex--;
-    carouselTrack.style.transform = `translateX(-${currentIndex * cardWidth}px)`;
-  }
+        $(".category-filter").each(function () {
+            const label = $(this).parent(); 
+            if ($(this).is(":checked")) {
+                label.addClass("checked");
+            } else {
+                label.removeClass("checked");
+            }
+        });
+    });
 });

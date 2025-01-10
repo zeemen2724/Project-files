@@ -4,62 +4,67 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <!-- Font Awesome CDN -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:400,700|Open+Sans:400,700">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="home.css">
     <link rel="stylesheet" href="services.css">
-    <title>Shebs Travel Services</title>
+    <title>Shebs.</title>
 </head>
 
 <body>
+    <!-- navbar -->
+    <nav class="navbar navbar-expand-lg fixed-top">
+        <div class="container">
+            <a class="navbar-brand me-auto" href="#">Shebs.</a>
+            <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar"
+                aria-labelledby="offcanvasNavbarLabel">
+                <div class="offcanvas-header">
+                    <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Shebs.</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                </div>
+                <div class="offcanvas-body">
+                    <ul class="navbar-nav justify-content-center flex-grow-1 pe-3">
+                        <li class="nav-item">
+                            <a class="nav-link mx-lg-2" aria-current="page" href="home.html">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link mx-lg-2 active" href="services.html">Services</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link mx-lg-2" href="destination.html">Destinations</a>
+                        </li>
 
-    <!-- Header Section -->
-    <header>
-        <nav class="navbar navbar-expand-lg navbar-light">
-            <div class="container-fluid">
-                <a class="navbar-brand logo" href="#">Shebs</a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
-                    <ul class="nav-links navbar-nav">
-                        <li class="nav-item"><a class="nav-link" href="/home.html">Home</a></li>
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" id="servicesDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                Services
-                            </a>
-                            <ul class="dropdown-content dropdown-menu">
-                                <li><a class="dropdown-item" href="/service1.html">Custom Travel Planning</a></li>
-                                <li><a class="dropdown-item" href="/services2.html">Travel Insurance</a></li>
-                                <li><a class="dropdown-item" href="/services3.html">Transportation Services</a></li>
-                            </ul>
+                        <li class="nav-item">
+                            <a class="nav-link mx-lg-2" href="aboutus.html">About us</a>
                         </li>
-                        <li class="nav-item"><a class="nav-link" href="/destination.html">Destinations</a></li>
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" id="packagesDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                Packages
-                            </a>
-                            <ul class="dropdown-content dropdown-menu">
-                                <li><a class="dropdown-item" href="#">Solo Packages</a></li>
-                                <li><a class="dropdown-item" href="#">Group Packages</a></li>
-                                <li class="dropdown dropdown-submenu">
-                                    <a class="dropdown-item dropdown-toggle" href="#">Event Packages</a>
-                                    <ul class="dropdown-content dropdown-menu">
-                                        <li><a class="dropdown-item" href="#">Umrah & Hajj</a></li>
-                                        <li><a class="dropdown-item" href="#">Destination Weddings</a></li>
-                                        <li><a class="dropdown-item" href="#">Corporate Retreats</a></li>
-                                        <li><a class="dropdown-item" href="#">New Year</a></li>
-                                    </ul>
-                                </li>
-                            </ul>
+                        <li class="nav-item">
+                            <a class="nav-link mx-lg-2" href="contactus.html">Contact us</a>
                         </li>
-                        <li class="nav-item"><a class="nav-link" href="#client">Clients</a></li>
+
                     </ul>
                 </div>
-                <button class="login-btn">Login</button>
             </div>
-        </nav>
-    </header>
+            <a href="#" class="login-button">Login</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar"
+                aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+        </div>
+    </nav>
 
-    <section class="slider">
+
+    <section class="landing-slider">
         <div class="slide active" style="background-image: url('assets/Custom\ Travel\ Planning.jpg');">
             <div class="overlay">
                 <div class="text">
@@ -110,14 +115,12 @@
                 </div>
             </div>
         </div>
-        <!-- Navigation Buttons -->
-        <div class="navigation">
-            <div class="prev">&#10094;</div>
-            <div class="next">&#10095;</div>
-        </div>
     </section>
 
-    <section class="space reveal">
+
+
+
+    <section class="space ">
         <div class="text-layer">
             <h2 class="background-text">Discover the World’s Most Stunning Destinations with Us!</h2>
             <h2 class="foreground-text">Featured Locations</h2>
@@ -176,202 +179,206 @@
     </section>
 
 
-
-
-
-
-
-
-    <section class="guide-section reveal">
-        <div class="guide-container">
-            <!-- Decorative Images -->
-            <img src="assets/plant.png" alt="Plant" class="decorative plant">
-            <img src="assets/watch.png" alt="Watch" class="decorative watch">
-
-            <!-- Main Guide Book Image -->
-            <div class="guide-image">
-                <img src="assets/guidebook.PNG" alt="Iceland Guide Book">
+    <!-- Affordable Plans Section -->
+    <section class="affordable-plans">
+        <h2 class="section-title">Let's Checkin</h2>
+        <h3 class="section-subtitle">Affordable Pricing Plans</h3>
+        <div class="plans">
+            <!-- Basic Plan -->
+            <div class="plan-card">
+                <div class="plan-header">
+                    <div class="plan-icon">
+                        <i class="ri-wallet-line"></i>
+                    </div>
+                    <h4>Basic Plan</h4>
+                </div>
+                <hr>
+                <p class="plan-price">$785.00<span>/Per Night</span></p>
+                <p class="plan-description">Essential services for basic and single person seeking.</p>
+                <ul class="plan-features">
+                    <li>✔ Up to 2 members</li>
+                    <li>✔ Room Service Fees</li>
+                    <li>✔ Driver Service Fees</li>
+                    <li>✔ Tour management</li>
+                    <li>✔ Collaboration</li>
+                    <li>✔ Entrance Fees</li>
+                    <li>✔ Guide Fees in Destination</li>
+                </ul>
+                <a href="#" class="plan-button">Get Started</a>
             </div>
 
-            <!-- Content Section -->
-            <div class="guide-content">
-                <h2>Iceland Guide Book</h2>
-                <p class="price">Starting at $12.99</p>
-                <p class="description">The expertly researched map, with its accurate and detailed information, is
-                    designed to meet the needs of adventure travelers.</p>
-                <a href="#" class="btn">Go to Store</a>
+            <!-- Advanced Plan -->
+            <div class="plan-card popular">
+                <div class="plan-header">
+                    <div class="plan-icon">
+                        <i class="ri-star-line"></i>
+                    </div>
+                    <h4>Advanced Plan</h4>
+                    <span class="popular-badge">Popular</span>
+                </div>
+                <hr>
+                <p class="plan-price">$980.00<span>/Per Night</span></p>
+                <p class="plan-description">Essential services for basic and single person seeking.</p>
+                <ul class="plan-features">
+                    <li>✔ Up to 2 members</li>
+                    <li>✔ Room Service Fees</li>
+                    <li>✔ Driver Service Fees</li>
+                    <li>✔ Tour management</li>
+                    <li>✔ Collaboration</li>
+                    <li>✔ Entrance Fees</li>
+                    <li>✔ Auto refresh ads</li>
+                </ul>
+                <a href="#" class="plan-button">Get Started</a>
             </div>
-        </div>
-    </section>
 
-    <section class="services-section reveal">
-        <!-- First subsection -->
-        <div class="service-row reveal">
-            <img src="/assets/Custom Travel Planning 1.jpg" alt="Safely Saved Lists">
-            <div class="service-text">
-                <h3>Custom Travel Planning</h3>
-                <p>NWe craft personalized travel itineraries tailored to your dreams. From accommodations to activities,
-                    every detail is customized to create a journey that reflects your preferences, ensuring a seamless
-                    and unforgettable experience.</p>
-                <a href="/service1.html">Read More</a>
-            </div>
-        </div>
-
-        <!-- Second subsection -->
-        <div class="service-row reveal">
-            <img src="/assets/Travel Insurance 2.jpg" alt="Flight Price Alert">
-            <div class="service-text">
-                <h3>Travel Insurance</h3>
-                <p>Travel worry-free with comprehensive insurance plans that cover unexpected events. From medical
-                    emergencies to trip cancellations, we provide peace of mind for every step of your journey.</p>
-                <a href="/services2.html">Find It Here</a>
-            </div>
-        </div>
-
-        <!-- Third subsection -->
-        <div class="service-row reveal">
-            <img src="/assets/Transportation Services 3.jpg" alt="Safely Saved Lists">
-            <div class="service-text">
-                <h3>Transportation Services</h3>
-                <p>Enjoy hassle-free travel with our reliable transportation services. Whether it's airport transfers,
-                    private chauffeurs, or local rides, we ensure your comfort and convenience at every destination.</p>
-                <a href="/services3.html">Read More</a>
-            </div>
-        </div>
-
-        <!-- Forth subsection -->
-        <div class="service-row reveal">
-            <img src="/assets/Destination Guides 4.jpg" alt="Flight Price Alert">
-            <div class="service-text">
-                <h3>Destination Guides</h3>
-                <p>Discover the best of every destination with our expertly curated guides. From hidden gems to must-see
-                    attractions, we provide insider tips to help you explore like a local.</p>
-                <a href="/services4.html">Find It Here</a>
-            </div>
-        </div>
-
-        <!-- Fifth subsection -->
-        <div class="service-row reveal">
-            <img src="/assets/Adventure & Special Interest Travel 5.jpg" alt="Flight Price Alert">
-            <div class="service-text">
-                <h3>Adventure & Special Interest Travel</h3>
-                <p>Embark on thrilling adventures or indulge in your passions with our special interest travel packages.
-                    Whether it’s hiking, diving, or cultural immersion, we design trips that cater to your adventurous
-                    spirit.</p>
-                <a href="/services5.html">Find It Here</a>
+            <!-- Premium Plan -->
+            <div class="plan-card">
+                <div class="plan-header">
+                    <div class="plan-icon">
+                        <i class="ri-vip-crown-line"></i>
+                    </div>
+                    <h4>Premium Plan</h4>
+                </div>
+                <hr>
+                <p class="plan-price">$1580.00<span>/Per Night</span></p>
+                <p class="plan-description">Essential services for basic and single person seeking.</p>
+                <ul class="plan-features">
+                    <li>✔ Up to 2 members</li>
+                    <li>✔ Room Service Fees</li>
+                    <li>✔ Driver Service Fees</li>
+                    <li>✔ Tour management</li>
+                    <li>✔ Collaboration</li>
+                    <li>✔ Entrance Fees</li>
+                    <li>✔ Auto refresh ads</li>
+                </ul>
+                <a href="#" class="plan-button">Get Started</a>
             </div>
         </div>
     </section>
 
-
-    <!-- Testimonial Section -->
-	<section class="testimonial-section reveal">
-		<div class="large-container">
-			<div class="sec-title">
-				<span class="title">Testimonial</span>
-				<h2>What Our core client say ?</h2>
-			</div>
-
-            <section class="space-testimonial reveal">
-                <h2 class="background-testi-text">At Shebs Travels, customer satisfaction is our greatest reward. <br> Here's what our valued travelers have to say about <br> their experiences with us</h2>  
-            </section>
-
-			<div class="testimonial-carousel owl-carousel owl-theme reveal">
-				<!-- Testimonial Block -->
-				<div class="testimonial-block">
-					<div class="inner-box">
-						<div class="text">Shebs Travels made my dream trip to Turkey so seamless and enjoyable! From the flights to the guided tours, everything was perfectly organized. I’ll definitely choose them for my next adventure!</div>
-						<div class="info-box">
-							<div class="thumb"><img src="http://t.commonsupport.com/adro/images/resource/thumb-1.jpg" alt=""></div>
-							<h4 class="name">Ayesha Khan</h4>
-							<span class="designation">⭐⭐⭐⭐⭐</span>
-						</div>
-					</div>
-				</div>
-
-				<!-- Testimonial Block -->
-				<div class="testimonial-block reveal">
-					<div class="inner-box">
-						<div class="text">I booked my honeymoon package through Shebs Travels, and it was beyond perfect! The attention to detail and the luxurious accommodations made our trip unforgettable. Thank you for such a beautiful experience!</div>
-						<div class="info-box">
-							<div class="thumb"><img src="http://t.commonsupport.com/adro/images/resource/thumb-1.jpg" alt=""></div>
-							<h4 class="name">Sara Ahmed</h4>
-							<span class="designation">⭐⭐⭐⭐⭐</span>
-						</div>
-					</div>
-				</div>
-
-				<!-- Testimonial Block -->
-				<div class="testimonial-block reveal">
-					<div class="inner-box">
-						<div class="text">Shebs Travels exceeded my expectations with their service and professionalism. The destination guides were so helpful, and all our transport arrangements were smooth. Looking forward to planning another trip soon!</div>
-						<div class="info-box">
-							<div class="thumb"><img src="http://t.commonsupport.com/adro/images/resource/thumb-1.jpg" alt=""></div>
-							<h4 class="name">Bilal Hassan</h4>
-							<span class="designation">⭐⭐⭐⭐⭐</span>
-						</div>
-					</div>
-				</div>
-			</div>
-
-			<div class="thumb-layer paroller reveal">
-				<figure class="image"><img src="http://t.commonsupport.com/adro/images/resource/user-thumbs.png" alt=""></figure>
-			</div>
-		</div>
-	</section>
+ 
+    <section class="service-list-card">
+        <div class="service-list">
+            <div class="card">
+                <img src="assets/Photo Shoot.jpg" alt="Photo Shoot">
+                <h3>Photo Shoot</h3>
+                <p>20 Listing</p>
+                <a href="contactus.html">Book Now</a>
+            </div>
+            <div class="card">
+                <img src="assets/Tour Guide.jpg" alt="Tour Guide">
+                <h3>Tour Guide</h3>
+                <p>22 Listing</p>
+                <a href="contactus.html">Book Now</a>
+            </div>
+            <div class="card">
+                <img src="assets/Cozy Event.jpg" alt="Cozy Event">
+                <h3>Cozy Event</h3>
+                <p>23 Listing</p>
+                <a href="contactus.html">Book Now</a>
+            </div>
+            <div class="card">
+                <img src="assets/Interesting Rest.jpg" alt="Interesting Rest">
+                <h3>Interesting Rest</h3>
+                <p>24 Listing</p>
+                <a href="contactus.html">Book Now</a>
+            </div>
+            <div class="card">
+                <img src="assets/Kayaking.jpg" alt="Kayaking">
+                <h3>Kayaking</h3>
+                <p>25 Listing</p>
+                <a href="contactus.html">Book Now</a>
+            </div>
+            <div class="card">
+                <img src="assets/Safe Flight.jpg" alt="Safe Flight">
+                <h3>Safe Flight</h3>
+                <p>26 Listing</p>
+                <a href="contactus.html">Book Now</a>
+            </div>
+            <div class="card">
+                <img src="assets/Entertainment.jpg" alt="Entertainment">
+                <h3>Entertainment</h3>
+                <p>27 Listing</p>
+                <a href="contactus.html">Book Now</a>
+            </div>
+            <div class="card">
+                <img src="assets/Delicious Food.jpg" alt="Delicious Food">
+                <h3>Delicious Food</h3>
+                <p>28 Listing</p>
+                <a class="service-card-btn" href="contactus.html">Book Now</a>
+            </div>
+        </div>
+    </section>
+    
 
 
 
+    <button id="backToTop" onclick="scrollToTop()">↑</button>
 
+    <!-- footer -->
+    <footer class="footer">
+        <div class="container-fluid">
+            <div class="row">
+                <!-- Brand and Description -->
+                <div class="col-md-4 col-sm-12">
+                    <div class="footer-brand">
+                        <h2>Shebs</h2>
+                        <p>Discover unforgettable travel experiences with Shebs, where every adventure is crafted to
+                            inspire.</p>
+                        <div class="social-icons">
+                            <a href="#"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#"><i class="fab fa-instagram"></i></a>
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                        </div>
+                    </div>
+                </div>
 
+                <!-- Quick Links -->
+                <div class="col-md-4 col-sm-12">
+                    <div class="footer-links">
+                        <h3>Quick Links</h3>
+                        <ul>
+                            <li><a href="#home">Home</a></li>
+                            <li><a href="#about">About Us</a></li>
+                            <li><a href="#services">Services</a></li>
+                            <li><a href="#testimonial">Testimonial</a></li>
+                            <li><a href="#contact">Contact Us</a></li>
+                        </ul>
+                    </div>
+                </div>
 
-
-    <!-- Footer Section -->
-    <footer class="footer reveal">
-        <div class="footer-container">
-            <div class="footer-brand">
-                <h2>Shebs</h2>
-                <p>Discover unforgettable travel experiences with Shebs, where every adventure is crafted to inspire.
-                </p>
-                <div class="social-icons">
-                    <a href="#"><i class="fab fa-facebook-f"></i></a>
-                    <a href="#"><i class="fab fa-instagram"></i></a>
-                    <a href="#"><i class="fab fa-twitter"></i></a>
-                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                <!-- Contact Form -->
+                <div class="col-md-4 col-sm-12">
+                    <div class="footer-contact">
+                        <h3>Contact Us</h3>
+                        <form action="#">
+                            <div class="form-group">
+                                <input type="text" placeholder="Full Name">
+                                <input type="email" placeholder="Email Address">
+                            </div>
+                            <div class="form-group">
+                                <input type="text" placeholder="Contact Number">
+                                <input type="text" placeholder="Country">
+                            </div>
+                            <textarea placeholder="Your Message"></textarea>
+                            <button type="submit">Send Message</button>
+                        </form>
+                    </div>
                 </div>
             </div>
-            <div class="footer-links">
-                <h3>Quick Links</h3>
-                <ul>
-                    <li><a href="#home">Home</a></li>
-                    <li><a href="#about">About Us</a></li>
-                    <li><a href="#services">Services</a></li>
-                    <li><a href="#testimonial">Testimonial</a></li>
-                    <li><a href="#contact">Contact Us</a></li>
-                </ul>
-            </div>
-            <div class="footer-contact">
-                <h3>Contact Us</h3>
-                <form action="#">
-                    <div class="form-group">
-                        <input type="text" placeholder="Full Name">
-                        <input type="email" placeholder="Email Address">
-                    </div>
-                    <div class="form-group">
-                        <input type="text" placeholder="Contact Number">
-                        <input type="text" placeholder="Country">
-                    </div>
-                    <textarea placeholder="Your Message"></textarea>
-                    <button type="submit">Send Message</button>
-                </form>
-            </div>
         </div>
+
         <div class="footer-bottom">
-            <p>Powered by Shebs</p>
+            <div class="container-fluid">
+                <p>Powered by Shebs</p>
+            </div>
         </div>
     </footer>
 
-    <!-- JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous">
+        </script>
     <script src="main.js"></script>
 </body>
 
