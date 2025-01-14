@@ -10,6 +10,15 @@
     --header-font: "Bebas Neue", sans-serif;
 }
 
+.NewTravelBtn{
+    border: 2px solid beige !important;
+    padding: 10px 20px 10px 20px !important;
+    text-align: center;
+    color: #f9f9f9;
+    border-radius: 20px;
+    margin: 0 auto;
+}
+
 * {
     padding: 0;
     margin: 0;
