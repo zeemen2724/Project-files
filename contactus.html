@@ -19,6 +19,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="stylesheet" href="home.css">
     <link rel="stylesheet" href="contectus.css">
+    <script type="module" src="./Firebase/app.js"></script>
     <title>Shebs.</title>
 </head>
 
@@ -62,7 +63,7 @@
             </button>
         </div>
     </nav>
-
+<!-- Form starts here! -->
     <section class="contact">
         <div class="contact-container">
             <div class="left">
@@ -98,12 +99,12 @@
                         </div>
 
                         <div class="contact-buttons">
-                            <button class="btn upload">
+                            <!-- <button class="btn upload">
                                 <span>
                                     <i class="fa-solid fa-paperclip"></i>Add Attachment
                                 </span>
                                 <input type="file" name="Attachment">
-                            </button>
+                            </button> -->
                             <input type="submit" value="Send message" class="btn">
                         </div>
                     </form>
@@ -116,7 +117,7 @@
             </div>
         </div>
     </section>
-
+<!-- Form End here! -->
 
 
 
@@ -161,22 +162,24 @@
                 <div class="col-md-4 col-sm-12">
                     <div class="footer-contact">
                         <h3>Contact Us</h3>
-                        <form action="#">
+                        <!-- Add id to the form for JavaScript to target -->
+                        <form id="footer-form" action="#">
                             <div class="form-group">
-                                <input type="text" placeholder="Full Name">
-                                <input type="email" placeholder="Email Address">
+                                <!-- Added name attributes to match JavaScript -->
+                                <input type="text" placeholder="Full Name" name="Full Name" required>
+                                <input type="email" placeholder="Email Address" name="Email" required>
                             </div>
                             <div class="form-group">
-                                <input type="text" placeholder="Contact Number">
-                                <input type="text" placeholder="Country">
+                                <!-- Added name attributes to match JavaScript -->
+                                <input type="text" placeholder="Contact Number" name="Contact Number" required>
+                                <input type="text" placeholder="Country" name="Country" required>
                             </div>
-                            <textarea placeholder="Your Message"></textarea>
+                            <textarea placeholder="Your Message" name="Message" required></textarea>
                             <button type="submit">Send Message</button>
                         </form>
                     </div>
                 </div>
-            </div>
-        </div>
+                
 
         <div class="footer-bottom">
             <div class="container-fluid">
@@ -189,6 +192,7 @@
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous">
     </script>
     <script src="main.js"></script>
+    <script type="module" src="/Firebase/app.js"></script>
 </body>
 
 </html>
