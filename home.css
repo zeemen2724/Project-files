@@ -673,7 +673,7 @@ html {
 .footer {
     background-color: var(--primary-color-dark);
     color: var(--white);
-    padding: 95px 0;
+    padding: 30px 10px;
 }
 
 .footer-container {
@@ -756,54 +756,13 @@ html {
     margin-bottom: 15px;
 }
 
-.footer-contact form {
-    display: flex;
-    flex-direction: column;
-}
 
-.footer-contact .form-group {
-    display: flex;
-    gap: 10px;
-    margin-bottom: 10px;
-}
-
-.footer-contact input,
-.footer-contact textarea {
-    background-color: var(--white);
-
-    border: none;
-    color: var(--white);
-    padding: 10px;
-    font-size: 14px;
-    border-radius: 4px;
+.footer-map iframe {
     width: 100%;
-}
-
-.footer-contact textarea {
-    min-height: 80px;
-    resize: none;
-}
-
-.footer-contact button {
-    background-color: var(--white);
-
-    color: var(--primary-color);
-
+    height: 300px;
     border: none;
-    padding: 10px 20px;
-    margin-top: 5px;
-    font-size: 16px;
-    border-radius: 4px;
-    cursor: pointer;
-    transition: background 0.3s, box-shadow 0.3s;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
-}
-
-.footer-contact button:hover {
-    background-color: var(--white);
-
-    color: var(--primary-color-dark);
-
+    display: block;
+    allowfullscreen: true;
 }
 
 .footer-bottom {
