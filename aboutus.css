@@ -203,7 +203,7 @@
     transform: rotateX(360deg);
 }
 
-.gallery-slider {
+.gallery {
     display: flex;
     gap: 20px;
     overflow: hidden;
