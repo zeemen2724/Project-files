@@ -1,207 +1,253 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- <script src="https://www.gstatic.com/firebasejs/9.0.0/firebase-app.js"></script> -->
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css" rel="stylesheet" />
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
     <!-- Font Awesome CDN -->
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:400,700|Open+Sans:400,700">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Roboto:400,700|Open+Sans:400,700"
+    />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+    />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
     <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
-    
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <link rel="stylesheet" href="home.css">
-    <title>Shebs.</title>
-</head>
 
-<body>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+    <link rel="stylesheet" href="home.css" />
+    <title>Shebs.</title>
+  </head>
+
+  <body>
     <!-- navbar -->
     <nav class="navbar navbar-expand-lg fixed-top">
-        <div class="container">
-            <a class="navbar-brand me-auto" href="#">Shebs.</a>
-            <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar"
-                aria-labelledby="offcanvasNavbarLabel">
-                <div class="offcanvas-header">
-                    <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Shebs.</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-                </div>
-                <div class="offcanvas-body">
-                    <ul class="navbar-nav justify-content-center flex-grow-1 pe-3">
-                        <li class="nav-item">
-                            <a class="nav-link mx-lg-2 active" aria-current="page" href="home.html">Home</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link mx-lg-2" href="services.html">Services</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link mx-lg-2" href="destination.html">Destinations</a>
-                        </li>
+      <div class="container">
+        <a class="navbar-brand me-auto" href="#">Shebs.</a>
+        <div
+          class="offcanvas offcanvas-end"
+          tabindex="-1"
+          id="offcanvasNavbar"
+          aria-labelledby="offcanvasNavbarLabel"
+        >
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Shebs.</h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="offcanvas"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="offcanvas-body">
+            <ul class="navbar-nav justify-content-center flex-grow-1 pe-3">
+              <li class="nav-item">
+                <a
+                  class="nav-link mx-lg-2 active"
+                  aria-current="page"
+                  href="home.html"
+                  >Home</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link mx-lg-2" href="services.html">Services</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link mx-lg-2" href="destination.html"
+                  >Destinations</a
+                >
+              </li>
 
-                        <li class="nav-item">
-                            <a class="nav-link mx-lg-2" href="aboutus.html">About us</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link mx-lg-2" href="contactus.html">Contact us</a>
-                        </li>
-
-                    </ul>
-                </div>
-            </div>
-            <a href="#" class="login-button">Login</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar"
-                aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
+              <li class="nav-item">
+                <a class="nav-link mx-lg-2" href="aboutus.html">About us</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link mx-lg-2" href="contactus.html">Contact us</a>
+              </li>
+            </ul>
+          </div>
         </div>
+        <a href="#" class="login-button">Try Now</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="offcanvas"
+          data-bs-target="#offcanvasNavbar"
+          aria-controls="offcanvasNavbar"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      </div>
     </nav>
 
     <!-- hero section  -->
-    <header class="header__container ">
-        <div class="header__content">
-            <h1>
-                LET'S GO!<br />
-                THE <span>ADVENTURE</span> IS WAITING FOR YOU
-            </h1>
-            <p>
-                Embark on Your Journey Today and Discover Uncharted Wonders Around the World - Your Adventure Awaits
-                with Exciting Experiences, Unforgettable Memories, and Endless Opportunities
-            </p>
-            <form action="/" class="form-container">
-                <div class="input__row">
-                    <div class="input__group">
-                        <h5>Destination</h5>
-                        <div>
-                            <span><i class="ri-map-pin-line"></i></span>
-                            <input type="text" placeholder="Paris, France" />
-                        </div>
-                    </div>
-                    <div class="input__group">
-                        <h5>Date</h5>
-                        <div>
-                            <span><i class="ri-calendar-2-line"></i></span>
-                            <input type="text" placeholder="17 July 2024" />
-                        </div>
-                    </div>
-                </div>
-                <button class="form-btn" type="submit">Search</button>
-            </form>
+    <header class="header__container">
+      <div class="header__content">
+        <h1>
+          LET'S GO!<br />
+          THE <span>ADVENTURE</span> IS WAITING FOR YOU
+        </h1>
+        <p>
+          Embark on Your Journey Today and Discover Uncharted Wonders Around the
+          World - Your Adventure Awaits with Exciting Experiences, Unforgettable
+          Memories, and Endless Opportunities
+        </p>
+        <form action="/" class="form-container">
+          <div class="input__row">
+            <div class="input__group">
+              <h5>Destination</h5>
+              <div>
+                <span><i class="ri-map-pin-line"></i></span>
+                <input type="text" placeholder="Paris, France" />
+              </div>
+            </div>
+            <div class="input__group">
+              <h5>Date</h5>
+              <div>
+                <span><i class="ri-calendar-2-line"></i></span>
+                <input type="text" placeholder="17 July 2024" />
+              </div>
+            </div>
+          </div>
+          <button class="form-btn" type="submit">Search</button>
+        </form>
+      </div>
+      <div class="header__image">
+        <div class="header__image__card header__image__card-1">
+          <span><i class="ri-key-line"></i></span>
+          Hotel Booking
         </div>
-        <div class="header__image">
-            <div class="header__image__card header__image__card-1">
-                <span><i class="ri-key-line"></i></span>
-                Hotel Booking
-            </div>
-            <div class="header__image__card header__image__card-2">
-                <span><i class="ri-passport-line"></i></span>
-                Flight Tickets
-            </div>
-            <div class="header__image__card header__image__card-3">
-                <span><i class="ri-map-2-line"></i></span>
-                Local Events
-            </div>
-            <div class="header__image__card header__image__card-4">
-                <span><i class="ri-guide-line"></i></span>
-                Tour Guide
-            </div>
-            <img src="assets/header.png" alt="header" />
+        <div class="header__image__card header__image__card-2">
+          <span><i class="ri-passport-line"></i></span>
+          Flight Tickets
         </div>
+        <div class="header__image__card header__image__card-3">
+          <span><i class="ri-map-2-line"></i></span>
+          Local Events
+        </div>
+        <div class="header__image__card header__image__card-4">
+          <span><i class="ri-guide-line"></i></span>
+          Tour Guide
+        </div>
+        <img src="assets/header.png" alt="header" />
+      </div>
     </header>
 
     <!-- popular tours -->
     <section class="popular-tours">
-        <div class="section-header">
-            <span class="section-subtitle">Popular Tours</span>
-            <h2>Amazing Tour Places Around The World</h2>
+      <div class="section-header">
+        <span class="section-subtitle">Popular Tours</span>
+        <h2>Amazing Tour Places Around The World</h2>
+      </div>
+      <div class="tour-cards">
+        <div class="tour-card">
+          <div class="featured-badge">Featured</div>
+          <img src="assets/tour bg 7.jpg" alt="Discovery Island Kayak Tour" />
+          <div class="tour-info">
+            <h3>Discovery Island Kayak Tour</h3>
+            <p><i class="ri-map-pin-line"></i> Main Street, Brooklyn, NY</p>
+            <p class="price">From $129.00</p>
+          </div>
         </div>
-        <div class="tour-cards">
-            <div class="tour-card">
-                <div class="featured-badge">Featured</div>
-                <img src="assets/tour bg 7.jpg" alt="Discovery Island Kayak Tour">
-                <div class="tour-info">
-                    <h3>Discovery Island Kayak Tour</h3>
-                    <p><i class="ri-map-pin-line"></i> Main Street, Brooklyn, NY</p>
-                    <p class="price">From $129.00</p>
-                </div>
-            </div>
-            <div class="tour-card">
-                <div class="featured-badge">Featured</div>
-                <img src="assets/tour bg 8.jpg" alt="The French Alps Kayak Tour">
-                <div class="tour-info">
-                    <h3>Discovery Island Kayak Tour</h3>
-                    <p><i class="ri-map-pin-line"></i> Main Street, Brooklyn, NY</p>
-                    <p class="price">From $129.00</p>
-                </div>
-            </div>
-            <div class="tour-card">
-                <div class="featured-badge">Featured</div>
-                <img src="assets/tour bg 1.jpg" alt="Halong Bay Kayak Tour">
-                <div class="tour-info">
-                    <h3>Discovery Island Kayak Tour</h3>
-                    <p><i class="ri-map-pin-line"></i> Main Street, Brooklyn, NY</p>
-                    <p class="price">From $129.00</p>
-                </div>
-            </div>
-            <div class="tour-card">
-                <div class="featured-badge">Featured</div>
-                <img src="assets/tour bg 2.jpg" alt="Sea of Cortez Kayak Tour">
-                <div class="tour-info">
-                    <h3>Discovery Island Kayak Tour</h3>
-                    <p><i class="ri-map-pin-line"></i> Main Street, Brooklyn, NY</p>
-                    <p class="price">From $129.00</p>
-                </div>
-            </div>
+        <div class="tour-card">
+          <div class="featured-badge">Featured</div>
+          <img src="assets/tour bg 8.jpg" alt="The French Alps Kayak Tour" />
+          <div class="tour-info">
+            <h3>Discovery Island Kayak Tour</h3>
+            <p><i class="ri-map-pin-line"></i> Main Street, Brooklyn, NY</p>
+            <p class="price">From $129.00</p>
+          </div>
         </div>
+        <div class="tour-card">
+          <div class="featured-badge">Featured</div>
+          <img src="assets/tour bg 1.jpg" alt="Halong Bay Kayak Tour" />
+          <div class="tour-info">
+            <h3>Discovery Island Kayak Tour</h3>
+            <p><i class="ri-map-pin-line"></i> Main Street, Brooklyn, NY</p>
+            <p class="price">From $129.00</p>
+          </div>
+        </div>
+        <div class="tour-card">
+          <div class="featured-badge">Featured</div>
+          <img src="assets/tour bg 2.jpg" alt="Sea of Cortez Kayak Tour" />
+          <div class="tour-info">
+            <h3>Discovery Island Kayak Tour</h3>
+            <p><i class="ri-map-pin-line"></i> Main Street, Brooklyn, NY</p>
+            <p class="price">From $129.00</p>
+          </div>
+        </div>
+      </div>
     </section>
 
-    <section class="travel-stats ">
-        <div class="content-container">
-            <div class="stat-heading">
-                <span>Are You Ready To Explore?</span>
-                <h2>Embark On A Journey With Real Adventures & Enjoy Nature</h2>
-                <button class="availability-btn">Check Availability</button>
-            </div>
-            <div class="stats-container">
-                <div class="stat-item">
-                    <i class="icon fa fa-hiking"></i>
-                    <h3 class="count" data-target="1024">0</h3>
-                    <p>Happy Travelers</p>
-                </div>
-                <div class="stat-item">
-                    <i class="icon fa fa-campground"></i>
-                    <h3 class="count" data-target="789">0</h3>
-                    <p>Tent Sites</p>
-                </div>
-                <div class="stat-item">
-                    <i class="icon fa fa-star"></i>
-                    <h3 class="count" data-target="1200">0</h3>
-                    <p>Positive Reviews</p>
-                </div>
-                <div class="stat-item">
-                    <i class="icon fa fa-trophy"></i>
-                    <h3 class="count" data-target="980">0</h3>
-                    <p>Awards Won</p>
-                </div>
-            </div>
+    <section class="travel-stats">
+      <div class="content-container">
+        <div class="stat-heading">
+          <span>Are You Ready To Explore?</span>
+          <h2>Embark On A Journey With Real Adventures & Enjoy Nature</h2>
+          <button class="availability-btn">Check Availability</button>
         </div>
+        <div class="stats-container">
+          <div class="stat-item">
+            <i class="icon fa fa-hiking"></i>
+            <h3 class="count" data-target="1024">0</h3>
+            <p>Happy Travelers</p>
+          </div>
+          <div class="stat-item">
+            <i class="icon fa fa-campground"></i>
+            <h3 class="count" data-target="789">0</h3>
+            <p>Tent Sites</p>
+          </div>
+          <div class="stat-item">
+            <i class="icon fa fa-star"></i>
+            <h3 class="count" data-target="1200">0</h3>
+            <p>Positive Reviews</p>
+          </div>
+          <div class="stat-item">
+            <i class="icon fa fa-trophy"></i>
+            <h3 class="count" data-target="980">0</h3>
+            <p>Awards Won</p>
+          </div>
+        </div>
+      </div>
     </section>
-
 
     <!-- testimonials -->
     <section class="testimonial-container">
         <h2>Testimonials</h2>
         <div id="myCarousel" class="carousel slide">
+            <!-- Carousel indicators -->
             <ol class="carousel-indicators">
                 <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
                 <li data-target="#myCarousel" data-slide-to="1"></li>
                 <li data-target="#myCarousel" data-slide-to="2"></li>
             </ol>
+            <!-- Wrapper for carousel items -->
             <div class="carousel-inner">
                 <div class="carousel-item active">
                     <div class="img-box"><img src="assets/testimonial - 1.png" alt=""></div>
@@ -271,6 +317,7 @@
     <footer class="footer">
         <div class="container-fluid">
             <div class="row">
+                <!-- Brand and Description -->
                 <div class="col-md-4 col-sm-12">
                     <div class="footer-brand">
                         <h2>Shebs</h2>
@@ -285,19 +332,21 @@
                     </div>
                 </div>
 
+                <!-- Quick Links -->
                 <div class="col-md-4 col-sm-12">
                     <div class="footer-links">
                         <h3>Quick Links</h3>
                         <ul>
-                            <li><a href="/home.html">Home</a></li>
-                            <li><a href="/aboutus.html">About Us</a></li>
-                            <li><a href="/services.html">Services</a></li>
-                            <li><a href="/destination.html">Destination</a></li>
-                            <li><a href="/contactus.html">Contact Us</a></li>
+                            <li><a href="#home">Home</a></li>
+                            <li><a href="#about">About Us</a></li>
+                            <li><a href="#services">Services</a></li>
+                            <li><a href="#testimonial">Testimonial</a></li>
+                            <li><a href="#contact">Contact Us</a></li>
                         </ul>
                     </div>
                 </div>
 
+                <!-- Contact Form -->
                 <div class="col-md-4 col-sm-12">
                     <div class="footer-contact">
                         <h3>Contact Us</h3>
@@ -317,6 +366,7 @@
                             <button type="submit">Send Message</button>
                         </form>
                     </div>
+
                 </div>
                 <script type="module" src="/firebasev2/app.js"></script>
               
@@ -334,4 +384,27 @@
     <!-- //<script type="module" src="/firebasev2/app.js"></script> -->
 </body>
 
+                    <textarea placeholder="Your Message" name="Message" required></textarea>
+                    <button type="submit">Send Message</button>
+                </form>
+            </div>
+        </div>
+
+      <div class="footer-bottom">
+        <div class="container-fluid">
+          <p>Powered by Shebs</p>
+        </div>
+      </div>
+    </footer>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
+    <script src="main.js"></script>
+    <script type="module" src="/Firebase/app.js"></script>
+
+
+  </body>
 </html>

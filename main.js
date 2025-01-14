@@ -95,25 +95,6 @@ setInterval(nextSlide, 3000);
 
 
 
-
-document.addEventListener("DOMContentLoaded", () => {
-    const slider = document.querySelector('.gallery-slider');
-    let scrollAmount = 0;
-    const slideWidth = 320; 
-    
-    setInterval(() => {
-        if (scrollAmount >= slider.scrollWidth - slider.offsetWidth) {
-            scrollAmount = 0;
-        } else {
-            scrollAmount += slideWidth;
-        }
-        slider.scrollTo({ left: scrollAmount, behavior: 'smooth' });
-    }, 7000);
-});
-
-
-
-
 $(document).ready(function () {
     const products = [
         // New Year Packages

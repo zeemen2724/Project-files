@@ -195,7 +195,7 @@
 .sticker {
     width: 100px;
     height: 100px;
-    background: no-repeat center center / contain;
+    background: no-repeat center;
     transition: transform 0.6s;
 }
 
@@ -203,7 +203,7 @@
     transform: rotateX(360deg);
 }
 
-.gallery-slider {
+.gallery {
     display: flex;
     gap: 20px;
     overflow: hidden;
